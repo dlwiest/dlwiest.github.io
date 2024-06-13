@@ -123,11 +123,15 @@ a:hover {
     border: 1px solid var(--color-light-gray);
     border-radius: 4px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-    visibility: hidden;  /* Hide the menu initially */
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out, visibility 0s 0.1s;
+    visibility: hidden;
 }
 
 #navbar-container nav #hamburger-menu.open {
-    visibility: visible;  /* Make the menu visible when open */
+    opacity: 1;
+    transition-delay: 0s;
+    visibility: visible;
 }
 
 #navbar-container nav #hamburger-menu ul {
