@@ -1,1 +1,118 @@
-praise the sun!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <div id="header-container" class="container bg-white">
+        <div class="content">
+            <header>
+                <div id="header-main">
+                    <div id="header-main-left">
+                        <span>Hi, my name is</span>
+                        <h1 class="text-dark-blue">Derrick Wiest</h1>
+                        <span>I'm a seasoned <span class="text-blue">web developer</span> based in Pittsburgh.</span>
+                    </div>
+
+                    <div id="header-main-right">
+                        <div id="headshot-container" class="bg-dark-blue"></div>
+                    </div>
+                </div>
+
+                <div id="header-contact">
+                    <span class="text-muted font-medium">Want to build something together?</span>
+
+                    <div class="mt1-5"><a class="button" href="#contact">Get in Touch</a></div>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <p>Work experience</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <p>Information about your professional background and skills.</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <section id="my-story">
+                    <h2>My Story</h2>
+                    <p>Information about your professional background and skills.</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="container bg-blue">
+            <div class="content">
+                <section id="contact">
+                    <div id="contact-header">
+                        <h2>Contact Me</h2>
+                        <p>I'm currently open to full time, contract, and freelance opportunities.</p>
+                    </div>
+
+                    <form>
+                        <fieldset>
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" name="name" id="contact-name" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="contact-email">Your Email</label>
+                            <input type="email" name="email" id="contact-email" required>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="contact-message">Message</label>
+                            <textarea name="message" id="contact-message" required rows="4"></textarea>
+                        </fieldset>
+
+                        <div>
+                            <button class="button" type="submit">Ship It</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container" class="container bg-dark-blue">
+        <div class="content">
+            <footer>
+                <p>© 2024 Derrick Wiest. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
