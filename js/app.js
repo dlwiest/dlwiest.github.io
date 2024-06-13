@@ -1,3 +1,34 @@
+// Hamburger menu
+let isHamburgerMenuOpen = false;
+
+const toggleHamburgerMenu = () => {
+    console.log("toggling hamburger menu");
+    const hamburgerMenu = document.querySelector('#navbar-container nav #hamburger-menu');
+    hamburgerMenu.classList.toggle('open');
+    isHamburgerMenuOpen = !isHamburgerMenuOpen;
+}
+
+(() => {
+    const hamburgerMenuButton = document.querySelector('#navbar-container nav #hamburger-button');
+    hamburgerMenuButton.addEventListener('click', toggleHamburgerMenu);
+})();
+
+// Smooth scrolling anchors
+for (let anchor of document.querySelectorAll('a[href^="#"]')) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (isHamburgerMenuOpen) {
+            toggleHamburgerMenu();
+        }
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+};
+
+// Contact form
 (() => {
     const accessKey = '28683c12-4770-4cc2-aa82-bf220676c336';
     const form = document.querySelector('#contact form');
@@ -23,6 +54,7 @@
         const containerMargin = parseInt(containerComputedStyle.paddingTop, 10) + parseInt(containerComputedStyle.paddingBottom, 10);
         const containerHeight = containerClientHeight - containerMargin;
 
+        // Try to send the message
         const name = document.querySelector('#contact-name').value;
         const email = document.querySelector('#contact-email').value;
         const message = document.querySelector('#contact-message').value;
@@ -48,7 +80,7 @@
 
                 // Replace form with sent notification
                 const sent = document.createElement('div');
-                sent.innerHTML = 'Thank you for your message! I will get back to you soon.';
+                sent.innerHTML = "<p>Thank you for your message! I'll get back to you soon.</p>";
                 form.parentNode.replaceChild(sent, form);
             } else {
                 console.error('Error sending email', data.message);
