@@ -37,26 +37,25 @@ const trapFocus = (element) => {
 // Hamburger menu
 let isHamburgerMenuOpen = false;
 
+const closeHamburgerMenuOnEscape = (e) => {
+    if (e.key === 'Escape') {
+        toggleHamburgerMenu();
+    }
+}
+
 const toggleHamburgerMenu = () => {
     const hamburgerMenu = document.querySelector(
         "#navbar-container nav #hamburger-menu"
     );
     hamburgerMenu.classList.toggle("open");
-    isHamburgerMenuOpen = !isHamburgerMenuOpen;
-
-    const closeOnEscape = (e) => {
-        if (e.key === 'Escape') {
-            toggleHamburgerMenu();
-        }
-    }
+    isHamburgerMenuOpen = hamburgerMenu.classList.contains("open");
 
     if (isHamburgerMenuOpen) { // Capture ecape and trap focus on open
-        hamburgerMenu.querySelector("a").focus();
+        document.addEventListener('keydown', closeHamburgerMenuOnEscape);
         releaseTrapFocus = trapFocus(hamburgerMenu);
-        document.addEventListener('keydown', closeOnEscape);
-    } else if (releaseTrapFocus) { // Clean up on close
+    } else { // Clean up on close
+        document.removeEventListener('keydown', closeHamburgerMenuOnEscape);
         releaseTrapFocus();
-        document.removeEventListener('keydown', closeOnEscape);
     }
 };
 
@@ -68,19 +67,21 @@ const toggleHamburgerMenu = () => {
 })();
 
 // Smooth scrolling anchors
-for (let anchor of document.querySelectorAll('a[href^="#"]')) {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
+(() => {
+    for (let anchor of document.querySelectorAll('a[href^="#"]')) {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
 
-        if (isHamburgerMenuOpen) {
-            toggleHamburgerMenu();
-        }
+            if (isHamburgerMenuOpen) {
+                toggleHamburgerMenu();
+            }
 
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+                behavior: "smooth",
+            });
         });
-    });
-}
+    }
+})();
 
 // Contact form
 (() => {
