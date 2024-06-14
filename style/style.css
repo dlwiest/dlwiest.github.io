@@ -127,7 +127,7 @@ a:hover {
     box-shadow: none;
 }
 
-#navbar-container nav #navigation-menu {
+#navigation-menu {
     position: absolute;
     top: 3.5rem;
     width: 10rem;
@@ -140,7 +140,7 @@ a:hover {
     visibility: hidden;
 }
 
-#navbar-container nav #navigation-menu.open {
+#navigation-menu.open {
     opacity: 1;
     transition-delay: 0s;
     visibility: visible;
@@ -182,21 +182,21 @@ header #header-main {
     gap: 2rem;
 }
 
-header #header-main #header-main-copy {
+#header-main-copy {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-header #header-main #header-main-photo {
+#header-main-photo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
 }
 
-header #header-main #header-main-photo #headshot-container {
+#headshot-container {
     width: 12rem;
     height: 12rem;
     border-radius: 100%;
@@ -206,17 +206,17 @@ header #header-main #header-main-photo #headshot-container {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-header #header-main h1 {
+#header-main h1 {
   font-size: 4rem;
   font-weight: 600;
   margin: 0.5rem 0 1rem 0;
 }
 
-header #header-main span, header #header-main p {
+#header-main span, #header-main p {
     font-size: 1.5rem;
 }
 
-header #header-contact {
+#header-contact {
     margin-top: 2rem;
 }
 
@@ -337,7 +337,7 @@ footer {
         display: none;
     }
 
-    #navbar-container nav #navigation-menu {
+    #navigation-menu {
         display: flex;
         position: relative;
         background-color: inherit;
@@ -368,11 +368,11 @@ footer {
         flex-direction: row;
     }
 
-    header #header-main #header-main-left {
+    #header-main-left {
         width: 66%;
     }
 
-    header #header-contact {
+    #header-contact {
         margin-top: 0;
     }
 
@@ -381,7 +381,7 @@ footer {
         gap: 8rem;
     }
 
-    #contact #contact-header {
+    #contact-header {
         width: 33%;
     }
 
