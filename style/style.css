@@ -25,8 +25,21 @@ body {
   min-height: 100vh;
 }
 
+h1, h2, h3 {
+    color: var(--color-dark-blue);
+    font-family: "Merriweather", serif;
+}
+
 p {
     line-height: 1.5rem;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+em {
+    font-style: italic;
 }
 
 a {
@@ -170,21 +183,21 @@ header #header-main {
     gap: 2rem;
 }
 
-header #header-main #header-main-left {
+header #header-main #header-main-copy {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-header #header-main #header-main-right {
+header #header-main #header-main-photo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
 }
 
-header #header-main #header-main-right #headshot-container {
+header #header-main #header-main-photo #headshot-container {
     width: 12rem;
     height: 12rem;
     border-radius: 100%;
@@ -195,8 +208,6 @@ header #header-main #header-main-right #headshot-container {
 }
 
 header #header-main h1 {
-  color: var(--color-dark-blue);
-  font-family: "Merriweather", serif;
   font-size: 4rem;
   font-weight: 600;
   margin: 0.5rem 0 1rem 0;
@@ -215,15 +226,41 @@ main {
   margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 4rem;
+}
+
+section {
+    padding-top: 1rem;
 }
 
 section h2 {
-  color: var(--color-dark-blue);
-  font-family: "Merriweather", serif;
   font-size: 3rem;
   font-weight: 500;
   padding-bottom: 1rem;
+}
+
+/* Skills */
+#skills .columns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#skills .skill-column {
+    width: 12rem;
+}
+
+#skills .skill-column h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+#skills .skill-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* Contact */
