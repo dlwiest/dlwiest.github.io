@@ -45,7 +45,7 @@ const closeHamburgerMenuOnEscape = (e) => {
 
 const toggleHamburgerMenu = () => {
     const hamburgerMenu = document.querySelector(
-        "#navbar-container nav #hamburger-menu"
+        "#navbar-container nav #navigation-menu"
     );
     hamburgerMenu.classList.toggle("open");
     isHamburgerMenuOpen = hamburgerMenu.classList.contains("open");
@@ -60,9 +60,8 @@ const toggleHamburgerMenu = () => {
 };
 
 (() => {
-    const hamburgerMenuButton = document.querySelector(
-        "#navbar-container nav #hamburger-button"
-    );
+    // Select the hamburger menu button
+    const hamburgerMenuButton = document.querySelector("#navbar-container nav button");
     hamburgerMenuButton.addEventListener("click", toggleHamburgerMenu);
 })();
 
