@@ -1,4 +1,10 @@
-// Traps focus in a given element
+// Hamburger menu
+let isHamburgerMenuOpen = false;
+
+const hamburgerMenuButton = document.querySelector("#navbar-container nav button");
+const hamburgerMenu = document.querySelector("#navigation-menu");
+
+// Function to trap focus within the menu when it is open
 let releaseTrapFocus;
 const trapFocus = (element) => {
     const focusableElements = element.querySelectorAll(
@@ -25,44 +31,49 @@ const trapFocus = (element) => {
                 e.preventDefault();
             }
         }
-    }
+    };
 
     element.addEventListener('keydown', trap);
 
     return () => {
         element.removeEventListener('keydown', trap);
-    }
+    };
 };
 
-// Hamburger menu
-let isHamburgerMenuOpen = false;
-
+// Function to close the hamburger menu when the Escape key is pressed
 const closeHamburgerMenuOnEscape = (e) => {
     if (e.key === 'Escape') {
         toggleHamburgerMenu();
     }
-}
+};
 
+// Function to toggle the hamburger menu
 const toggleHamburgerMenu = () => {
-    const hamburgerMenu = document.querySelector(
-        "#navbar-container nav #navigation-menu"
-    );
     hamburgerMenu.classList.toggle("open");
     isHamburgerMenuOpen = hamburgerMenu.classList.contains("open");
 
-    if (isHamburgerMenuOpen) { // Capture ecape and trap focus on open
+    if (isHamburgerMenuOpen) {
         document.addEventListener('keydown', closeHamburgerMenuOnEscape);
         releaseTrapFocus = trapFocus(hamburgerMenu);
-    } else { // Clean up on close
+    } else {
         document.removeEventListener('keydown', closeHamburgerMenuOnEscape);
-        releaseTrapFocus();
+        if (releaseTrapFocus) releaseTrapFocus();
     }
 };
 
 (() => {
-    // Select the hamburger menu button
-    const hamburgerMenuButton = document.querySelector("#navbar-container nav button");
+    // Add click event listener to the hamburger menu button
     hamburgerMenuButton.addEventListener("click", toggleHamburgerMenu);
+
+    // Add click event listener to the document to handle clicks outside the menu
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = hamburgerMenu.contains(event.target);
+        const isClickOnButton = hamburgerMenuButton.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnButton && isHamburgerMenuOpen) {
+            toggleHamburgerMenu();
+        }
+    });
 })();
 
 // Smooth scrolling anchors
@@ -87,14 +98,14 @@ const toggleHamburgerMenu = () => {
     document.addEventListener('DOMContentLoaded', () => {
         const tabs = document.querySelectorAll('#experience-content .tabs input[type="radio"]');
         const panels = document.querySelectorAll('#experience-content .tab-panels .tab-panel');
-    
+
         tabs.forEach(tab => {
             tab.addEventListener('change', () => {
                 // Hide all panels
                 panels.forEach(panel => {
                     panel.style.display = 'none';
                 });
-    
+
                 // Show the panel corresponding to the checked tab
                 const selectedPanel = document.querySelector(`#experience-panel-${tab.id.split('-')[2]}`);
                 if (selectedPanel) {
@@ -126,7 +137,7 @@ const toggleHamburgerMenu = () => {
             document.querySelector('#experience').scrollIntoView({
                 behavior: "smooth",
             });
-        }
+        };
 
         backButton.addEventListener("click", () => {
             onExperienceTraversal("back");
@@ -190,7 +201,7 @@ const toggleHamburgerMenu = () => {
 
                 // Replace form with sent notification
                 const sent = document.createElement("div");
-                sent.innerHTML ="<p>Thank you for your message! I'll get back to you soon.</p>";
+                sent.innerHTML = "<p>Thank you for your message! I'll get back to you soon.</p>";
                 form.parentNode.replaceChild(sent, form);
             } else {
                 console.error("Error sending email", data.message);
