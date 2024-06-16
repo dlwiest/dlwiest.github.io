@@ -43,7 +43,7 @@
                     <div id="header-main-copy">
                         <span>Hi, my name is</span>
                         <h1 class="text-dark-blue">Derrick Wiest</h1>
-                        <p>I'm a seasoned <span class="text-blue">web developer</span> based in Pittsburgh.</span>
+                        <p>I'm a seasoned <span class="text-blue">web developer</span> based in Pittsburgh</span>
                     </div>
 
                     <div id="header-main-photo">
@@ -65,7 +65,97 @@
             <div class="content">
                 <section id="experience">
                     <h2>Experience</h2>
-                    <p>Work experience</p>
+                    
+                    <div id="experience-content">
+                        <div class="tabs">
+                            <input type="radio" id="experience-tab-1" name="experience-tab" checked>
+                            <label for="experience-tab-1">JazzHR / Employ</label>
+                            <input type="radio" id="experience-tab-2" name="experience-tab">
+                            <label for="experience-tab-2">Friday Systems</label>
+                            <input type="radio" id="experience-tab-3" name="experience-tab">
+                            <label for="experience-tab-3">Industry Weapon</label>
+                            <input type="radio" id="experience-tab-4" name="experience-tab">
+                            <label for="experience-tab-4">VIVA Health</label>
+                            <input type="radio" id="experience-tab-5" name="experience-tab">
+                            <label for="experience-tab-5">Penn State University</label>
+                        </div>
+                        <div class="tab-panels">
+                            <div class="tab-panel" id="experience-panel-1">
+                                <h3>Software Engineer at <span class="text-dark-blue">JazzHR</span></h3>
+                                <small>August 2021 - Present</small>
+
+                                <ul>
+                                    <li>Spearheaded the migration of the core product front end from AngularJS to React, playing a pivotal role in architecture decisions, library selection, establishing standards, and mentoring team members on React best practices.</li>
+                                    <li>Contributed significantly to the development of high-impact features such as Reporting and Candidate Texting, while also ensuring robust support and enhancements for existing functionalities.</li>
+                                    <li>Developed a prototype for JazzHR's first AI-powered feature, a tool that evaluates candidate resumes against job descriptions and provides actionable insights, now successfully deployed to customers.</li>
+                                </ul>
+
+                                <div>
+                                    <p>I joined JazzHR during a pivotal transitional period. In addition to having been recently acquired and exiting their startup era, the company had recently resolved to migrate from AngularJS to React. The front end had evolved over a decade, through multiple eras of JavaScript standards, and relied heavily on services that were tightly coupled with Angular code, which presented some interesting challenges. Given that a complete overhaul was not feasible, problems often mandated innovative, out-of-the-box solutions to enable seamless communication between different parts of the application.</p>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="experience-panel-2">
+                                <h3>App Developer at <span class="text-dark-blue">Friday Systems</span></h3>
+                                <small>October 2020 - August 2021</small>
+
+                                <ul>
+                                    <li>Developed Friday Systems' first native mobile application, an inventory management tool that allows customers to manage inventory, update listings, and upload photos on-the-go. The app is currently available to all customers on the App Store and Google Play Store.</li>
+                                </ul>
+
+                                <div>
+                                    <p>After my departure from Industry Weapon, while in search of the perfect full time position, I took on a contract with Friday Systems to develop their first mobile app. A standout feature of this application is the ability to scan vehicle VINs to automatically populate vehicle details. This functionality significantly streamlines the process of creating new vehicle listings while reducing potential for errors.</p>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="experience-panel-3">
+                                <h3>Front End Engineer at <span class="text-dark-blue">Industry Weapon</span></h3>
+                                <small>August 2019 - August 2020</small>
+
+                                <ul>
+                                    <li>Collaborated with a diverse client base to develop over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
+                                    <li>Developed user-friendly dashboards for seamless template customization across various devices, enhancing the flexibility and accessibility of digital signage solutions.</li>
+                                </ul>
+
+                                <div>
+                                    <p>If someone were to design a crash course on React and CSS performance, it'd be hard to beat the experience I gained at Industry Weapon. The templates I developed there were heavily animation-oriented and needed to run smoothly on low-power devices like the Raspberry Pi, making every paint and render cycle crucial. While most applications may not operate under such stringent performance constraints, the awareness I gained of potential pitfalls and the optimizations techniques I mastered have been invaluable.</p>
+                                </div>
+
+                                </div>
+                            <div class="tab-panel" id="experience-panel-4">
+                                <h3>Senior Web Developer at <span class="text-dark-blue">VIVA Health</span></h3>
+                                <small>September 2016 - August 2019</small>
+
+                                <ul>
+                                    <li>Collaborated with care managers, customer service representatives, and claims specialists to develop and enhance internal software solutions, significantly improving service delivery for over 100,000 members across Alabama.</li>
+                                    <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
+                                    <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
+                                </ul>
+
+                                <div>
+                                    <p>One often underrated perk of working as a software developer is the opportunity to gain a deeper understanding of different industries. Like many Americans, I knew very little about the intracacies of the US healthcare system, despite needing to rely on it as a customer, so I was excited for the opportunity to broaden my knowledge.</p>
+                                    <p>This role also provided my introduction to React, back when class-based components were still the norm. I'm grateful to have started learning the library early in its evolution and to have witnessed its significant developments firsthand.</p>
+                                </div>
+                            </div>
+                            <div class="tab-panel" id="experience-panel-5">
+                                <h3>Programmer / Analyst at <span class="text-dark-blue">Penn State University</span></h3>
+                                <small>January 2014 - August 2016</small>
+
+                                <ul>
+                                    <li>Collaborated with faculty, administrators, and staff to develop and maintain applications supporting the college's administrative, outreach, and e-learning initiatives, with a strong focus on accessibility and compliance due to public funding requirements.</li>
+                                    <li>Led the creation of the college's first real-time application for event presentations, utilizing WebSockets to facilitate live Q&A interactions, enhancing audience engagement and moderator efficiency during events.</li>
+                                    <li>Designed and implemented an interactive web application to assist students in developing, modifying, and collaborating on business plan proposals.</li>
+                                </ul>
+
+                                <div>
+                                    <p>One of the unique challenges I faced at Penn State was that, because the university accepts state funding, all applications needed to adhere to strict accessibility standards, including graceful degradation for any JavaScript features. This could be frustrating at times, but I'm grateful for the experience, because it instilled in me early in my career a keen awareness of accessibility considerations like maintaining proper DOM hierarchy, implementing ARIA tags, and ensuring screen reader compatibility.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="experience-navigation">
+                        <button id="button-experience-back" aria-label="Back"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button id="button-experience-forward" aria-label="Forward"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
                 </section>
             </div>
         </div>
@@ -85,7 +175,7 @@
                                 <li>Next.js</li>
                                 <li>Redux / MobX / Zustand</li>
                                 <li>CSS3 / SCSS / Tailwind</li>
-                                <li>Jest</li>
+                                <li>Jest / Testing LIbrary</li>
                             </ul>
                         </div>
 
@@ -132,8 +222,9 @@
             <div class="content">
                 <section id="my-story">
                     <h2>My Story</h2>
-                    <p>My software development journey started when I built my first website as a kid — a fan page for the Nickelodeon show <em>Rugrats</em> — with the help of various online tutorials and by scanning the source of other sites I admired. My interest in software followed me into high school, where I helped maintain the district website and built an application to manage a class-wide game of Assassin using PHP and MySQL.</p>
-                    <p>After college, my journey took a detour while I pursued writing, but I never stopped coding during that period. Mostly for myself at first — I enjoyed the problem solving aspect and how easily I could automate day-to-day tasks, e.g. comparing the price of books across different vendors or generating a daily news feed and sending it to my Kindle — but gradually I took on more freelance work as well, leveling up my skills along the way. This eventually inspired me to switch over to coding full time, and I've been loving what I do ever since!</p>
+                    <p>My journey in software development began as a child when I built my first website — a fan page and info repository for my favorite Nickelodeon show — with the help of various online resources and by scanning the source of other sites I admired. This interest followed me into high school, where I helped maintain the district website and developed an application using PHP and MySQL to manage a class-wide game of Assassin.</p>
+                    <p>After college, my journey took a detour to pursue an interest in writing, but I continued to hone my coding skills, driven by a love for problem solving component and the efficiency of automating common tasks like comparing the price of books across vendors or aggregating a daily news feed and sending it to my Kindle. As my projects gained attention, I started acquiring freelance clients, and before long, my lifelong hobby had transformed into my main source of income. This led me to commit fully to software development, and I've loved what I do ever since.</p>
+                    <p>I'm a full stack web developer with a special passion for front end engineering. If you'd like to build something together, I would love to hear from you!</p>
                 </section>
             </div>
         </div>
@@ -174,7 +265,18 @@
     <div id="footer-container" class="container bg-dark-blue">
         <div class="content">
             <footer>
-                <p>© 2024 Derrick Wiest</p>
+                <div id="footer-navigation">
+                    <ul>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#my-story">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div id="copyright">
+                    <p>© 2024 Derrick Wiest</p>
+                </div>
             </footer>
         </div>
     </div>

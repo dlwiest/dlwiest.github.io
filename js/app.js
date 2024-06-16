@@ -82,6 +82,62 @@ const toggleHamburgerMenu = () => {
     }
 })();
 
+// Experience tabs
+(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('#experience-content .tabs input[type="radio"]');
+        const panels = document.querySelectorAll('#experience-content .tab-panels .tab-panel');
+    
+        tabs.forEach(tab => {
+            tab.addEventListener('change', () => {
+                // Hide all panels
+                panels.forEach(panel => {
+                    panel.style.display = 'none';
+                });
+    
+                // Show the panel corresponding to the checked tab
+                const selectedPanel = document.querySelector(`#experience-panel-${tab.id.split('-')[2]}`);
+                if (selectedPanel) {
+                    selectedPanel.style.display = 'flex';
+                }
+            });
+        });
+
+        // Initially display the first panel
+        const initialPanel = document.querySelector('.tab-panels .tab-panel');
+        if (initialPanel) {
+            initialPanel.style.display = 'flex';
+        }
+
+        // Allow navigation with arrow buttons
+        const backButton = document.querySelector("#button-experience-back");
+        const forwardButton = document.querySelector("#button-experience-forward");
+
+        const onExperienceTraversal = (direction) => {
+            const currentActiveTab = document.querySelector('#experience-content .tabs input[type="radio"]:checked');
+            const index = Array.from(tabs).indexOf(currentActiveTab);
+            const targetIndex = direction === "forward" ? index + 1 : index - 1;
+            if (tabs[targetIndex]) {
+                tabs[targetIndex].click();
+            } else {
+                tabs[direction === "forward" ? 0 : tabs.length - 1].click();
+            }
+
+            document.querySelector('#experience').scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+
+        backButton.addEventListener("click", () => {
+            onExperienceTraversal("back");
+        });
+
+        forwardButton.addEventListener("click", () => {
+            onExperienceTraversal("forward");
+        });
+    });
+})();
+
 // Contact form
 (() => {
     const accessKey = "28683c12-4770-4cc2-aa82-bf220676c336";
