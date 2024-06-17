@@ -99,15 +99,22 @@ const toggleHamburgerMenu = () => {
         const tabs = document.querySelectorAll('#experience-content .tabs input[type="radio"]');
         const panels = document.querySelectorAll('#experience-content .tab-panels .tab-panel');
 
+        let selectedPanel;
+
+        // Hide all panels by default
+        for (let panel of panels) {
+            panel.style.display = 'none';
+        }
+
         tabs.forEach(tab => {
             tab.addEventListener('change', () => {
-                // Hide all panels
-                panels.forEach(panel => {
-                    panel.style.display = 'none';
-                });
+                // Hide the previously selected panel
+                if (selectedPanel) {
+                    selectedPanel.style.display = 'none';
+                }
 
                 // Show the panel corresponding to the checked tab
-                const selectedPanel = document.querySelector(`#experience-panel-${tab.id.split('-')[2]}`);
+                selectedPanel = document.querySelector(`#experience-panel-${tab.id.split('-')[2]}`);
                 if (selectedPanel) {
                     selectedPanel.style.display = 'flex';
                 }
@@ -117,6 +124,7 @@ const toggleHamburgerMenu = () => {
         // Initially display the first panel
         const initialPanel = document.querySelector('.tab-panels .tab-panel');
         if (initialPanel) {
+            selectedPanel = initialPanel;
             initialPanel.style.display = 'flex';
         }
 
