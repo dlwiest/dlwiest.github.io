@@ -106,7 +106,7 @@ const toggleHamburgerMenu = () => {
             panel.style.display = 'none';
         }
 
-        tabs.forEach(tab => {
+        for (let tab of tabs) {
             tab.addEventListener('change', () => {
                 // Hide the previously selected panel
                 if (selectedPanel) {
@@ -119,7 +119,7 @@ const toggleHamburgerMenu = () => {
                     selectedPanel.style.display = 'flex';
                 }
             });
-        });
+        };
 
         // Initially display the first panel
         const initialPanel = document.querySelector('.tab-panels .tab-panel');
