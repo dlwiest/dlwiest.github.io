@@ -214,8 +214,7 @@ button:disabled,
 
 #headshot-container {
     background-image: url('/img/headshot.png');
-    background-position: -40px;
-    background-size: 120%;
+    background-size: cover;
     border-radius: 100%;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
     height: 12rem;
