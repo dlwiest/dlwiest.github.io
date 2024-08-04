@@ -93,6 +93,43 @@ const toggleHamburgerMenu = () => {
     }
 })();
 
+// Project Tabs
+(() => {
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('#projects-content .tabs input[type="radio"]');
+        const panels = document.querySelectorAll('#projects-content .tab-panels .tab-panel');
+
+        let selectedPanel;
+
+        // Hide all panels by default
+        for (let panel of panels) {
+            panel.style.display = 'none';
+        }
+
+        for (let tab of tabs) {
+            tab.addEventListener('change', () => {
+                // Hide the previously selected panel
+                if (selectedPanel) {
+                    selectedPanel.style.display = 'none';
+                }
+
+                // Show the panel corresponding to the checked tab
+                selectedPanel = document.querySelector(`#project-panel-${tab.id.split('-')[2]}`);
+                if (selectedPanel) {
+                    selectedPanel.style.display = 'flex';
+                }
+            });
+        };
+
+        // Initially display the first panel
+        const initialPanel = document.querySelector('#projects-content .tab-panels .tab-panel');
+        if (initialPanel) {
+            selectedPanel = initialPanel;
+            initialPanel.style.display = 'flex';
+        }
+    });
+})();
+
 // Experience tabs
 (() => {
     document.addEventListener('DOMContentLoaded', () => {
@@ -122,7 +159,7 @@ const toggleHamburgerMenu = () => {
         };
 
         // Initially display the first panel
-        const initialPanel = document.querySelector('.tab-panels .tab-panel');
+        const initialPanel = document.querySelector('#experience-content .tab-panels .tab-panel');
         if (initialPanel) {
             selectedPanel = initialPanel;
             initialPanel.style.display = 'flex';

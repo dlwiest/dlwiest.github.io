@@ -74,6 +74,49 @@
     <main>
         <div class="container">
             <div class="content">
+                <section id="projects">
+                    <h2>Projects</h2>
+                    
+                    <div id="projects-content">
+                        <div class="tabs">
+                            <input type="radio" id="project-tab-1" name="project-tab" checked>
+                            <label for="project-tab-1">
+                                <div class="project-image-container">
+                                    <img src="/img/projects/pinhub-logo.png" alt="PinHub">
+                                </div>
+                                <h3>PinHub</h3>
+                            </label>
+
+                            <input type="radio" id="project-tab-2" name="project-tab">
+                            <label for="project-tab-2">
+                                <div class="project-image-container">
+                                    <img src="/img/projects/jukerabbit-logo.png" alt="JukeRabbit">
+                                </div>
+                                <h3>JukeRabbit</h3>
+                            </label>
+                        </div>
+
+                        <div class="tab-panels">
+                            <div class="tab-panel" id="project-panel-1">
+                                <h3>PinHub</h3>
+                                <span class="title">Lead Engineer</span>
+
+                                <p>In July 2024, Brendan Turner (creator of <a href="https://pindigo.app/" target="_blank">Pindigo</a>) and I teamed up to create PinHub as a one stop shop for all of your pinball needs. One month later, we launched a public beta of the app featuring a machine search, news aggregation, an events calendar, and an interactive map. PinHub currently includes offers basic support for user authentication and profiles, which we're working on expanding to a suite of social features like machine reviews, user-submitted tips and discussions. Finally, we plan to add a pinball marketplace early 2025.</p>
+                                <p>PinHub is currently live at <a href="https://pinhub.gg" target="_blank">pinhub.gg</a>.</p>
+                            </div>
+
+                            <div class="tab-panel" id="project-panel-2">
+                                <h3>JukeRabbit</h3>
+                                <span class="title">Founder</span>
+
+                                <p>JukeRabbit is a passion project I'd been contemplating for a long time since witnessing on many occasions aux access leading to tension at parties. With JukeRabbit, I set out to solve this problem by creating essentially a TouchTunes for house parties: the host creates a session, connects to their speakers via Bluetooth or aux, and receives a six-digit access code to share with their guests. Anyone with the access code is then able to able to connect through the app to see what's currently playing, request new songs, and to watch the playlist develop in real time. The benefit over Spotify Jams, aside from guests not needing Spotify accounts (although those who do are able to queue songs from their own playlists), is that instead of just appending new requests to the end of the queue, JukeRabbit intelligently prioritizes requests based on how long since the guest had last heard one of their picks. It also provides an auto-DJ function that adds new songs to the list based on what's been played so far when it runs out of requests.</p>
+                                <p>An early version of JukeRabbit (then called FreeJ) worked by leveraging an exploit in the Linux Spotify client that allowed other applications to issue commands. Usability was limited, however, due to the need for the host to run JukeRabbit as a server on a Linux machine. The release of Spotify's Web Playback SDK enabled a much more user-friendly version that allowed anyone to host a JukeRabbit session simply by connecting to the web app and authorizing Spotify.
+                                <p>The ability to host JukeRabbit sessions is currently restricted to whitelisted users pending official approval from Spotify, but it's been a big hit at my own events, and I'm excited to release it to the public. If you're curious to see how it works, I'd be happy to set up a demo. The app is currently live at <a href="https://jukerabbit.io" target="_blank">jukerabbit.io</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section id="experience">
                     <h2>Experience</h2>
                     
