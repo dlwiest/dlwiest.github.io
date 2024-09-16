@@ -226,21 +226,31 @@ const toggleHamburgerMenu = () => {
         const message = document.querySelector("#contact-message").value;
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    access_key: accessKey,
-                    name,
-                    email,
-                    message,
-                }),
-            });
+            let data, isSpam;
 
-            const data = await response.json();
-            if (data.success) {
+            // Getting a lot of weird one-word messages from bots
+            if (message.split(' ').length < 2) {
+                isSpam = true;
+            }
+        
+            if (!isSpam) {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        access_key: accessKey,
+                        name,
+                        email,
+                        message,
+                    }),
+                });
+
+                data = await response.json();
+            }
+            
+            if (isSpam || data.success) {
                 // Fix the height of the container
                 document.querySelector("#contact").style.height = `${containerHeight}px`;
 
