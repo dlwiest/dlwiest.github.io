@@ -26,7 +26,7 @@
 [data-component="tab-panel"] [data-tabs] button {
   background: none;
   border: none;
-  border-left: 2px solid var(--color-gray);
+  border-left: 2px solid var(--color-medium-gray);
   border-radius: 0;
   box-shadow: none;
   color: var(--color-black);

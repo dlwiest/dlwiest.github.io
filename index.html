@@ -41,7 +41,6 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my-story">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -60,7 +59,7 @@
                     </div>
 
                     <div id="header-main-photo">
-                        <div id="headshot-container" class="bg-dark-blue" title="Derrick Wiest"></div>
+                        <img src="img/headshot.png" alt="Derrick Wiest" id="headshot-container" />
                     </div>
                 </div>
 
@@ -73,7 +72,7 @@
         </div>
     </div>
 
-    <main>
+    <main class="bg-off-white">
         <div class="container">
             <div class="content">
                 <section id="projects">
@@ -87,26 +86,40 @@
 
                         <div data-tab-contents>
                             <div data-tab-content="1" role="tabpanel" aria-hidden="false">
-                                <div class="project-item">
-                                    <h3>PinHub</h3>
-                                    <small>Lead Engineer</small>
+                                <a href="https://flippd.gg" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>PinHub <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
 
                                     <p>In July 2024, I teamed up with Alex Phelps and Brendan Turner to create PinHub as a one stop shop for all of your pinball needs. The site launched as a content aggregator, providing pinball news, an event calendar, an interactive venue map, and a searchable library of machines, but that was only the beginning: we've since implemented social features including user-submitted guides and reviews as well as discussions, with more on the way.</p>
                                     <p>As of December 2024, we've officially acquired Pindigo for high score tracking.</p>
-                                    <p>PinHub is currently live at <a href="https://pinhub.gg" target="_blank">pinhub.gg</a>.</p>
-                                </div>
+                                    
+                                    <div class="project-tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">Next.js</span>
+                                        <span class="tag">PostgreSQL</span>
+                                        <span class="tag">Social Features</span>
+                                    </div>
+                                </a>
                             </div>
 
                             <div data-tab-content="2" role="tabpanel" aria-hidden="false">
-                                <div class="project-item">
-                                    <h3>JukeRabbit</h3>
-                                    <small>Founder</small>
+                                <a href="https://jukerabbit.io" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
     
                                     <p>JukeRabbit is a passion project I'd been contemplating for a long time since witnessing on many occasions aux access leading to tension at parties. With JukeRabbit, I set out to solve this problem by creating essentially a TouchTunes for house parties: the host creates a session, connects to their speakers via Bluetooth or aux, and receives a six-digit access code to share with their guests. Anyone with the access code is then able to able to connect through the app to see what's currently playing, request new songs, and to watch the playlist develop in real time.</p>
                                     <p>The unique value add compared to similar solutions like Spotify's own Jams system is that instead of just appending new requests to the end of the queue, JukeRabbit intelligently prioritizes requests based on how long since the guest had last heard one of their picks.</p>
                                     <p>The ability to host JukeRabbit sessions is currently restricted to whitelisted users pending official approval from Spotify, but it's been a big hit at my own events, and I'm excited to release it to the public. If you're curious to see how it works, I'd be happy to set up a demo.</p>
-                                    <p>The app is currently live at <a href="https://jukerabbit.io" target="_blank">jukerabbit.io</a>.</p>
-                                </div>
+                                    
+                                    <div class="project-tags">
+                                        <span class="tag">React Native</span>
+                                        <span class="tag">Spotify API</span>
+                                        <span class="tag">Real-time</span>
+                                        <span class="tag">Mobile</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
@@ -135,83 +148,102 @@
 
                         <div data-tab-contents>
                             <div data-tab-content="1" role="tabpanel" aria-hidden="false">
-                                <div class="experience-item">
-                                    <h3>Software Engineer at <span class="text-dark-blue">JazzHR</span></h3>
-                                    <small>August 2021 - Present</small>
-    
-                                    <ul>
-                                        <li>Spearheaded the migration of the core product front end from AngularJS to React, playing a pivotal role in architecture decisions, library selection, establishing standards, and mentoring team members on React best practices.</li>
-                                        <li>Contributed significantly to the development of high-impact features such as Reporting and Candidate Texting, while also ensuring robust support and enhancements for existing functionalities.</li>
-                                        <li>Developed a prototype for JazzHR's first AI-powered feature, a tool that evaluates candidate resumes against job descriptions and provides actionable insights, now successfully deployed to customers.</li>
-                                    </ul>
-    
-                                    <div>
-                                        <p>When I joined JazzHR, the company had recently resolved to migrate from AngularJS to React. This presented some interesting challenges: the front end had evolved over a decade, through multiple eras of JavaScript standards, and relied heavily on services that were tightly coupled with Angular code. Given that a complete overhaul was off the table, the two frameworks would need to coexist as we iteratively migrated away from AngularJS. Thanks to my extensive experience with React, I was able to employ out-of-the-box solutions to overcome the biggest hurdles and lay the groundwork for a smooth transition.</p>
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>Software Engineer at <span class="text-dark-blue">JazzHR</span></h3>
+                                            <small>August 2021 - Present</small>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Spearheaded the migration of the core product front end from AngularJS to React, playing a pivotal role in architecture decisions, library selection, establishing standards, and mentoring team members on React best practices.</li>
+                                            <li>Contributed significantly to the development of high-impact features such as Reporting and Candidate Texting, while also ensuring robust support and enhancements for existing functionalities.</li>
+                                            <li>Developed a prototype for JazzHR's first AI-powered feature, a tool that evaluates candidate resumes against job descriptions and provides actionable insights, now successfully deployed to customers.</li>
+                                        </ul>
+                                    </div>
+    
                                 </div>
                             </div>
 
                             <div data-tab-content="2" role="tabpanel" aria-hidden="false">
-                                <div class="experience-item">
-                                    <h3>App Developer at <span class="text-dark-blue">Friday Systems</span></h3>
-                                    <small>October 2020 - August 2021</small>
-    
-                                    <ul>
-                                        <li>Developed Friday Systems' first native mobile application, an inventory management tool that allows customers to manage inventory, update listings, and upload photos on-the-go. The app is currently available to all customers on the App Store and Google Play Store.</li>
-                                    </ul>
-    
-                                    <div>
-                                        <p>After my departure from Industry Weapon, while in search of the perfect full-time position, I took on a contract with Friday Systems to develop their first native mobile app. A standout feature of this application is the ability to scan vehicle VINs to automatically populate vehicle details. This functionality significantly streamlines the process of creating new vehicle listings while reducing potential for errors.</p>
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>App Developer at <span class="text-dark-blue">Friday Systems</span></h3>
+                                            <small>October 2020 - August 2021</small>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Developed Friday Systems' first native mobile application, an inventory management tool that allows customers to manage inventory, update listings, and upload photos on-the-go. The app is currently available to all customers on the App Store and Google Play Store.</li>
+                                        </ul>
+                                    </div>
+    
                                 </div>
                             </div>
 
                             <div data-tab-content="3" role="tabpanel" aria-hidden="false">
-                                <div class="experience-item">
-                                    <h3>Front End Engineer at <span class="text-dark-blue">Industry Weapon</span></h3>
-                                    <small>August 2019 - August 2020</small>
-    
-                                    <ul>
-                                        <li>Collaborated with a diverse client base to develop over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
-                                        <li>Developed user-friendly dashboards for seamless template customization across various devices, enhancing the flexibility and accessibility of Industry Weapon's core product.</li>
-                                    </ul>
-    
-                                    <div>
-                                        <p>If someone were to design a crash course on React and CSS performance, it'd be hard to beat the experience I gained at Industry Weapon. The templates I developed there were heavily animation-oriented and needed to run smoothly on low-power devices like the Raspberry Pi, making every paint and render cycle crucial. While most applications may not operate under such stringent performance constraints, the awareness I gained of potential pitfalls and the optimizations techniques I mastered have been invaluable.</p>
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>Front End Engineer at <span class="text-dark-blue">Industry Weapon</span></h3>
+                                            <small>August 2019 - August 2020</small>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Collaborated with a diverse client base to develop over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
+                                            <li>Developed user-friendly dashboards for seamless template customization across various devices, enhancing the flexibility and accessibility of Industry Weapon's core product.</li>
+                                        </ul>
+                                    </div>
+    
                                 </div>
                             </div>
                             <div data-tab-content="4" role="tabpanel" aria-hidden="false">
-                                <div class="experience-item">
-                                    <h3>Senior Web Developer at <span class="text-dark-blue">VIVA Health</span></h3>
-                                    <small>September 2016 - August 2019</small>
-    
-                                    <ul>
-                                        <li>Collaborated with care managers, customer service representatives, and claims specialists to develop and enhance internal software solutions, significantly improving service delivery for over 100,000 members across Alabama.</li>
-                                        <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
-                                        <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
-                                    </ul>
-    
-                                    <div>
-                                        <p>One often underrated perk of working as a software developer is the opportunity to gain a deeper understanding of different industries. Like many Americans, I knew very little about the intricacies of the US healthcare system, despite needing to rely on it as a customer, so I was excited for the opportunity to broaden my knowledge.</p>
-                                        <p>This role also provided my introduction to React, back when class-based components were still the norm. I'm grateful to have started learning the library early in its evolution and to have witnessed its significant developments firsthand.</p>
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>Senior Web Developer at <span class="text-dark-blue">VIVA Health</span></h3>
+                                            <small>September 2016 - August 2019</small>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Collaborated with care managers, customer service representatives, and claims specialists to develop and enhance internal software solutions, significantly improving service delivery for over 100,000 members across Alabama.</li>
+                                            <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
+                                            <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
+                                        </ul>
+                                    </div>
+    
                                 </div>
                             </div>
                             <div data-tab-content="5" role="tabpanel" aria-hidden="false">
-                                <div class="experience-item">
-                                    <h3>Programmer / Analyst at <span class="text-dark-blue">Penn State University</span></h3>
-                                    <small>January 2014 - August 2016</small>
-    
-                                    <ul>
-                                        <li>Collaborated with faculty, administrators, and staff to develop and maintain applications supporting the college's administrative, outreach, and e-learning initiatives, with a strong focus on accessibility and compliance due to public funding requirements.</li>
-                                        <li>Led the creation of the college's first real-time application for event presentations, utilizing WebSockets to facilitate live Q&A interactions, enhancing audience engagement and moderator efficiency during events.</li>
-                                        <li>Designed and implemented an interactive web application to assist students in developing, modifying, and collaborating on business plan proposals.</li>
-                                    </ul>
-    
-                                    <div>
-                                        <p>One of the unique challenges I faced at Penn State was that, because the university accepts state funding, all applications needed to adhere to strict accessibility standards, including graceful degradation for any JavaScript features. This could be frustrating at times, but I'm grateful for the experience, because it instilled in me early in my career a keen awareness of accessibility considerations like maintaining proper DOM hierarchy, implementing ARIA tags, and ensuring screen reader compatibility.</p>
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
                                     </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>Programmer / Analyst at <span class="text-dark-blue">Penn State University</span></h3>
+                                            <small>January 2014 - August 2016</small>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Collaborated with faculty, administrators, and staff to develop and maintain applications supporting the college's administrative, outreach, and e-learning initiatives, with a strong focus on accessibility and compliance due to public funding requirements.</li>
+                                            <li>Led the creation of the college's first real-time application for event presentations, utilizing WebSockets to facilitate live Q&A interactions, enhancing audience engagement and moderator efficiency during events.</li>
+                                            <li>Designed and implemented an interactive web application to assist students in developing, modifying, and collaborating on business plan proposals.</li>
+                                        </ul>
+                                    </div>
+    
                                 </div>
                             </div>
                         </div>
@@ -230,23 +262,31 @@
                 <section id="skills">
                     <h2>Skills</h2>
                     
-                    <div class="columns-container">
-                        <div class="skill-column">
-                            <h3>Front End</h3>
-
+                    <div class="skills-grid">
+                        <div class="skill-card bg-white">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <h3>Front End</h3>
+                            </div>
                             <ul>
                                 <li>JavaScript / TypeScript</li>
                                 <li>React</li>
                                 <li>Next.js</li>
                                 <li>Redux / MobX / Zustand</li>
                                 <li>CSS3 / SCSS / Tailwind</li>
-                                <li>Jest / Testing LIbrary</li>
+                                <li>Jest / Testing Library</li>
                             </ul>
                         </div>
 
-                        <div class="skill-column">
-                            <h3>Back End</h3>
-
+                        <div class="skill-card bg-white">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-server"></i>
+                                </div>
+                                <h3>Back End</h3>
+                            </div>
                             <ul>
                                 <li>Node.js</li>
                                 <li>Express</li>
@@ -257,9 +297,13 @@
                             </ul>
                         </div>
 
-                        <div class="skill-column">
-                            <h3>Design</h3>
-
+                        <div class="skill-card bg-white">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-palette"></i>
+                                </div>
+                                <h3>Design</h3>
+                            </div>
                             <ul>
                                 <li>UI / UX</li>
                                 <li>Figma</li>
@@ -268,9 +312,13 @@
                             </ul>
                         </div>
 
-                        <div class="skill-column">
-                            <h3>Soft Skills</h3>
-
+                        <div class="skill-card bg-white">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <h3>Soft Skills</h3>
+                            </div>
                             <ul>
                                 <li>Problem Solving</li>
                                 <li>Communication</li>
@@ -284,25 +332,17 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="content">
-                <section id="my-story">
-                    <h2>My Story</h2>
-                    <p>My web development journey began at ten years old when I built my first website — a fan page and info repository for my favorite Nickelodeon show — with the help of various online resources and by scanning the source of other sites I admired. Although it was only a simple, static site, it inspired a curiosity about programming, and I soon branched out to JavaScript and, eventually, PHP and MySQL as well. By high school, I was regularly building small utility apps and browser games, in addition to helping maintain the district website.</p>
-                    <p>After college, while pursuing a career in writing, I continued to hone my coding skills, driven by a love for problem solving and the efficiency of automating common tasks like comparing the price of books across vendors or aggregating a daily news feed and sending it to my Kindle. As my projects gained attention, I started acquiring freelance clients, and before long, my lifelong hobby had transformed into my main source of income. This led me to commit fully to software development, and I've loved what I do ever since!</p>
-                </section>
-            </div>
-        </div>
 
         <div class="container bg-blue">
             <div class="content">
                 <section id="contact">
                     <div id="contact-header">
-                        <h2>Contact Me</h2>
-                        <p>I'm currently open to full-time, contract, and freelance opportunities.</p>
+                        <h2>Let's Work Together</h2>
+                        <p>I'm always interested in hearing about new projects and opportunities.<br>
+                        Whether you have a question or just want to say hi, feel free to reach out!</p>
                     </div>
 
-                    <form>
+                    <form class="bg-white">
                         <fieldset>
                             <label for="contact-name">Your Name</label>
                             <input type="text" name="name" id="contact-name" autocomplete="name" required>
@@ -319,7 +359,10 @@
                         </fieldset>
 
                         <div>
-                            <button class="button" type="submit">Send It</button>
+                            <button class="button" type="submit">Send Message</button>
+                            <a href="https://linkedin.com/in/dlwiest" target="_blank" class="button button-secondary">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn
+                            </a>
                         </div>
                     </form>
                 </section>
@@ -330,17 +373,8 @@
     <div id="footer-container" class="container bg-dark-blue">
         <div class="content">
             <footer>
-                <div id="footer-navigation">
-                    <ul>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#my-story">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
                 <div id="copyright">
-                    <p>© 2024 Derrick Wiest</p>
+                    <p>© 2025 Derrick Wiest. All rights reserved.</p>
                 </div>
             </footer>
         </div>
