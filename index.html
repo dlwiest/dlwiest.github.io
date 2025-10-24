@@ -80,44 +80,73 @@
                     
                     <div data-component="tab-panel">
                         <div data-tabs>
-                            <button data-tab="1" role="tab" aria-selected="true">PinHub</button>
-                            <button data-tab="2" role="tab" aria-selected="false">JukeRabbit</button>
+                            <button data-tab="1" role="tab" aria-selected="true">Flippd</button>
+                            <button data-tab="2" role="tab" aria-selected="false">Bahia Pez Vela</button>
+                            <button data-tab="3" role="tab" aria-selected="false">JukeRabbit</button>
                         </div>
 
                         <div data-tab-contents>
                             <div data-tab-content="1" role="tabpanel" aria-hidden="false">
                                 <a href="https://flippd.gg" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
-                                        <h3>PinHub <i class="fa-solid fa-external-link"></i></h3>
+                                        <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>In July 2024, I teamed up with Alex Phelps and Brendan Turner to create PinHub as a one stop shop for all of your pinball needs. The site launched as a content aggregator, providing pinball news, an event calendar, an interactive venue map, and a searchable library of machines, but that was only the beginning: we've since implemented social features including user-submitted guides and reviews as well as discussions, with more on the way.</p>
-                                    <p>As of December 2024, we've officially acquired Pindigo for high score tracking.</p>
+                                    <p>In July 2024, I teamed up with Alex Phelps and Brendan Turner to create what started as PinHub but has since evolved into Flippd, a pinball-oriented social media platform. What began as a content aggregator has transformed into a thriving community where pinball enthusiasts share photos, scores, and reviews through a timeline-based social feed.</p>
+                                    <p>The platform centers around user-generated content with smart algorithms that surface significant achievements, personal bests, and community highlights. We still maintain our foundational features like local event calendars, interactive venue maps, and our comprehensive pinball machine encyclopedia, but they now seamlessly integrate with the social experience.</p>
+                                    <p>As of December 2024, we've officially acquired Pindigo, strengthening our position as the go-to platform for pinball score tracking and community engagement.</p>
                                     
-                                    <div class="project-tags">
+                                    <div class="tags">
                                         <span class="tag">React</span>
                                         <span class="tag">Next.js</span>
+                                        <span class="tag">TypeScript</span>
                                         <span class="tag">PostgreSQL</span>
-                                        <span class="tag">Social Features</span>
+                                        <span class="tag">Mapbox</span>
+                                        <span class="tag">Social Media</span>
+                                        <span class="tag">Real-time</span>
                                     </div>
                                 </a>
                             </div>
 
                             <div data-tab-content="2" role="tabpanel" aria-hidden="false">
+                                <a href="https://bahiapezvela.com" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>Bahia Pez Vela <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
+
+                                    <p>In 2024, I took on my first marketing site project for Bahia Pez Vela, a luxury resort community in Costa Rica. This was uncharted territory for me since I'd never built a hospitality marketing site before, but the challenge turned out to be exactly what I needed to push my skills in new directions.</p>
+                                    <p>The biggest technical hurdle was integrating with their existing booking platform, which offered essentially no API to work with. I ended up having to scrape their booking system's HTML responses to extract availability data, then cache and filter it to provide a seamless search experience without users having to leave the site.</p>
+                                    <p>Building for an international audience meant implementing proper localization from the ground up using Paraglide, supporting both English and Spanish with smart URL routing. I also got to work with Mapbox again, creating an interactive resort map where guests can explore different villa locations and immediately check availability.</p>
+                                    
+                                    <div class="tags">
+                                        <span class="tag">Next.js</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Tailwind CSS</span>
+                                        <span class="tag">Mapbox</span>
+                                        <span class="tag">Paraglide</span>
+                                        <span class="tag">API Scraping</span>
+                                        <span class="tag">Marketing Site</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div data-tab-content="3" role="tabpanel" aria-hidden="false">
                                 <a href="https://jukerabbit.io" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
     
-                                    <p>JukeRabbit is a passion project I'd been contemplating for a long time since witnessing on many occasions aux access leading to tension at parties. With JukeRabbit, I set out to solve this problem by creating essentially a TouchTunes for house parties: the host creates a session, connects to their speakers via Bluetooth or aux, and receives a six-digit access code to share with their guests. Anyone with the access code is then able to able to connect through the app to see what's currently playing, request new songs, and to watch the playlist develop in real time.</p>
-                                    <p>The unique value add compared to similar solutions like Spotify's own Jams system is that instead of just appending new requests to the end of the queue, JukeRabbit intelligently prioritizes requests based on how long since the guest had last heard one of their picks.</p>
-                                    <p>The ability to host JukeRabbit sessions is currently restricted to whitelisted users pending official approval from Spotify, but it's been a big hit at my own events, and I'm excited to release it to the public. If you're curious to see how it works, I'd be happy to set up a demo.</p>
+                                    <p>JukeRabbit started as a solution to a problem I'd witnessed too many times: party music becoming a source of tension instead of fun. You know the scene: someone gets aux access and suddenly everyone's fighting over the queue. I built JukeRabbit as essentially TouchTunes for house parties, where the host creates a session, connects their speakers, and shares a six-digit code with guests who can then request songs and watch the playlist evolve in real time.</p>
+                                    <p>What sets JukeRabbit apart from solutions like Spotify's Jams is the smart queue management. Instead of just dumping new requests at the end of a potentially endless queue, it intelligently prioritizes songs based on how long it's been since each guest heard one of their picks, keeping everyone engaged.</p>
+                                    <p>While I'm still waiting on official Spotify approval to open it up publicly, it's been a huge hit at my own events. If you're curious to see it in action, I'd be happy to give you a demo.</p>
                                     
-                                    <div class="project-tags">
+                                    <div class="tags">
                                         <span class="tag">React Native</span>
+                                        <span class="tag">TypeScript</span>
                                         <span class="tag">Spotify API</span>
                                         <span class="tag">Real-time</span>
                                         <span class="tag">Mobile</span>
+                                        <span class="tag">Queue Management</span>
                                     </div>
                                 </a>
                             </div>
@@ -139,11 +168,12 @@
 
                     <div data-component="tab-panel">
                         <div data-tabs>
-                            <button data-tab="1" role="tab" aria-selected="true">JazzHR / Employ</button>
-                            <button data-tab="2" role="tab" aria-selected="false">Friday Systems</button>
-                            <button data-tab="3" role="tab" aria-selected="false">Industry Weapon</button>
-                            <button data-tab="4" role="tab" aria-selected="false">VIVA Health</button>
-                            <button data-tab="5" role="tab" aria-selected="false">Penn State University</button>
+                            <button data-tab="1" role="tab" aria-selected="true">Dick's Sporting Goods</button>
+                            <button data-tab="2" role="tab" aria-selected="false">JazzHR</button>
+                            <button data-tab="3" role="tab" aria-selected="false">Friday Systems</button>
+                            <button data-tab="4" role="tab" aria-selected="false">Industry Weapon</button>
+                            <button data-tab="5" role="tab" aria-selected="false">VIVA Health</button>
+                            <button data-tab="6" role="tab" aria-selected="false">Penn State University</button>
                         </div>
 
                         <div data-tab-contents>
@@ -154,15 +184,26 @@
                                     </div>
                                     <div class="experience-content">
                                         <div class="experience-header">
-                                            <h3>Software Engineer at <span class="text-dark-blue">JazzHR</span></h3>
-                                            <small>August 2021 - Present</small>
+                                            <h3>Software Engineer at <span class="text-dark-blue">Dick's Sporting Goods</span></h3>
+                                            <div class="date-ranges">
+                                                <small>February 2025 - Present</small>
+                                            </div>
                                         </div>
         
                                         <ul>
-                                            <li>Spearheaded the migration of the core product front end from AngularJS to React, playing a pivotal role in architecture decisions, library selection, establishing standards, and mentoring team members on React best practices.</li>
-                                            <li>Contributed significantly to the development of high-impact features such as Reporting and Candidate Texting, while also ensuring robust support and enhancements for existing functionalities.</li>
-                                            <li>Developed a prototype for JazzHR's first AI-powered feature, a tool that evaluates candidate resumes against job descriptions and provides actionable insights, now successfully deployed to customers.</li>
+                                            <li>Enhanced the reporting UI for vendor fulfillment, fixing longstanding bugs and improving user experience, enabling seamless oversight and modification of in-progress orders with access to actionable reporting data.</li>
+                                            <li>Led initiatives to support platform rebuild, including load testing and exploring AI-driven features like predictive order routing, strengthening system reliability and performance.</li>
+                                            <li>Contributed to migrating the existing hosting architecture to Kubernetes, improving scalability and deployment efficiency for the vendor fulfillment platform.</li>
                                         </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">Java</span>
+                                            <span class="tag">Spring</span>
+                                            <span class="tag">Camunda</span>
+                                            <span class="tag">Kubernetes</span>
+                                            <span class="tag">Performance</span>
+                                            <span class="tag">AI Integration</span>
+                                        </div>
                                     </div>
     
                                 </div>
@@ -175,13 +216,27 @@
                                     </div>
                                     <div class="experience-content">
                                         <div class="experience-header">
-                                            <h3>App Developer at <span class="text-dark-blue">Friday Systems</span></h3>
-                                            <small>October 2020 - August 2021</small>
+                                            <h3>Software Engineer at <span class="text-dark-blue">JazzHR</span></h3>
+                                            <div class="date-ranges">
+                                                <small>August 2021 - July 2024</small>
+                                            </div>
                                         </div>
         
                                         <ul>
-                                            <li>Developed Friday Systems' first native mobile application, an inventory management tool that allows customers to manage inventory, update listings, and upload photos on-the-go. The app is currently available to all customers on the App Store and Google Play Store.</li>
+                                            <li>Led front-end modernization by migrating the core product from AngularJS to React, overseeing architectural decisions and establishing development and testing standards.</li>
+                                            <li>Mentored team members on React best practices, resulting in enhanced code quality and faster development cycles.</li>
+                                            <li>Delivered key features including Reporting and Candidate Texting, while supporting legacy systems, contributing to increased user engagement and system stability.</li>
+                                            <li>Pioneered JazzHR's first AI feature, developing and deploying a prototype that analyzes resumes against job descriptions, enhancing product value and improving hiring decisions.</li>
                                         </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">AngularJS</span>
+                                            <span class="tag">TypeScript</span>
+                                            <span class="tag">Mentoring</span>
+                                            <span class="tag">AI Prototyping</span>
+                                            <span class="tag">Migration</span>
+                                        </div>
                                     </div>
     
                                 </div>
@@ -194,18 +249,31 @@
                                     </div>
                                     <div class="experience-content">
                                         <div class="experience-header">
-                                            <h3>Front End Engineer at <span class="text-dark-blue">Industry Weapon</span></h3>
-                                            <small>August 2019 - August 2020</small>
+                                            <h3>Programmer at <span class="text-dark-blue">Friday Systems</span></h3>
+                                            <div class="date-ranges">
+                                                <small>October 2020 - August 2021</small>
+                                                <small>August 2011 - December 2013</small>
+                                            </div>
                                         </div>
         
                                         <ul>
-                                            <li>Collaborated with a diverse client base to develop over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
-                                            <li>Developed user-friendly dashboards for seamless template customization across various devices, enhancing the flexibility and accessibility of Industry Weapon's core product.</li>
+                                            <li>Developed a custom content management system (CMS) used by over 400 private car dealerships, enabling customers to manage website content and keep vehicle inventory current.</li>
+                                            <li>Built Friday Systems' first mobile app for inventory management, allowing customers to manage listings, update inventory, and upload photos from mobile devices. Available on the App Store and Google Play.</li>
+                                            <li>Maintained vehicle search engines (Motoverse, Auto-Locate, PA AutoFind) and expanded the database with 800,000+ listings.</li>
                                         </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">React Native</span>
+                                            <span class="tag">CMS Development</span>
+                                            <span class="tag">Mobile Development</span>
+                                            <span class="tag">Database Management</span>
+                                            <span class="tag">Search Engines</span>
+                                        </div>
                                     </div>
     
                                 </div>
                             </div>
+
                             <div data-tab-content="4" role="tabpanel" aria-hidden="false">
                                 <div class="experience-item bg-white">
                                     <div class="experience-icon">
@@ -213,15 +281,27 @@
                                     </div>
                                     <div class="experience-content">
                                         <div class="experience-header">
-                                            <h3>Senior Web Developer at <span class="text-dark-blue">VIVA Health</span></h3>
-                                            <small>September 2016 - August 2019</small>
+                                            <h3>Front End Engineer at <span class="text-dark-blue">Industry Weapon</span></h3>
+                                            <div class="date-ranges">
+                                                <small>August 2019 - August 2020</small>
+                                            </div>
                                         </div>
         
                                         <ul>
-                                            <li>Collaborated with care managers, customer service representatives, and claims specialists to develop and enhance internal software solutions, significantly improving service delivery for over 100,000 members across Alabama.</li>
-                                            <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
-                                            <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
+                                            <li>Developed over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
+                                            <li>Created user-friendly dashboards for template customization across various devices, improving flexibility and accessibility of Industry Weapon's core product.</li>
+                                            <li>Optimized performance, improving template loading times and responsiveness across various display technologies.</li>
                                         </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">React</span>
+                                            <span class="tag">Node.js</span>
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">CSS Animations</span>
+                                            <span class="tag">Digital Signage</span>
+                                            <span class="tag">Performance</span>
+                                            <span class="tag">UI/UX</span>
+                                        </div>
                                     </div>
     
                                 </div>
@@ -233,15 +313,59 @@
                                     </div>
                                     <div class="experience-content">
                                         <div class="experience-header">
-                                            <h3>Programmer / Analyst at <span class="text-dark-blue">Penn State University</span></h3>
-                                            <small>January 2014 - August 2016</small>
+                                            <h3>Senior Web Developer at <span class="text-dark-blue">VIVA Health</span></h3>
+                                            <div class="date-ranges">
+                                                <small>September 2016 - August 2019</small>
+                                            </div>
                                         </div>
         
                                         <ul>
-                                            <li>Collaborated with faculty, administrators, and staff to develop and maintain applications supporting the college's administrative, outreach, and e-learning initiatives, with a strong focus on accessibility and compliance due to public funding requirements.</li>
+                                            <li>Collaborated with cross-functional teams to enhance internal software solutions, improving service for 100,000+ members.</li>
+                                            <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
+                                            <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
+                                        </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">Meteor</span>
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">Mobile Development</span>
+                                            <span class="tag">Healthcare</span>
+                                            <span class="tag">UX Design</span>
+                                            <span class="tag">Performance</span>
+                                            <span class="tag">Cross-functional</span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div data-tab-content="6" role="tabpanel" aria-hidden="false">
+                                <div class="experience-item bg-white">
+                                    <div class="experience-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                    </div>
+                                    <div class="experience-content">
+                                        <div class="experience-header">
+                                            <h3>Programmer / Analyst at <span class="text-dark-blue">Penn State University</span></h3>
+                                            <div class="date-ranges">
+                                                <small>January 2014 - August 2016</small>
+                                            </div>
+                                        </div>
+        
+                                        <ul>
+                                            <li>Partnered with faculty, administrators, and staff to build and maintain applications supporting college administrative, outreach, and e-learning initiatives.</li>
+                                            <li>Focused on accessibility to ensure compliance with public funding requirements, enhancing usability for a wide range of users.</li>
                                             <li>Led the creation of the college's first real-time application for event presentations, utilizing WebSockets to facilitate live Q&A interactions, enhancing audience engagement and moderator efficiency during events.</li>
                                             <li>Designed and implemented an interactive web application to assist students in developing, modifying, and collaborating on business plan proposals.</li>
                                         </ul>
+                                        
+                                        <div class="tags">
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">WebSockets</span>
+                                            <span class="tag">Accessibility</span>
+                                            <span class="tag">E-learning</span>
+                                            <span class="tag">Real-time</span>
+                                            <span class="tag">Education</span>
+                                        </div>
                                     </div>
     
                                 </div>
@@ -271,12 +395,17 @@
                                 <h3>Front End</h3>
                             </div>
                             <ul>
-                                <li>JavaScript / TypeScript</li>
+                                <li>JavaScript</li>
+                                <li>TypeScript</li>
                                 <li>React</li>
+                                <li>React Native</li>
                                 <li>Next.js</li>
-                                <li>Redux / MobX / Zustand</li>
-                                <li>CSS3 / SCSS / Tailwind</li>
-                                <li>Jest / Testing Library</li>
+                                <li>Redux</li>
+                                <li>Zustand</li>
+                                <li>CSS3</li>
+                                <li>Tailwind</li>
+                                <li>Jest</li>
+                                <li>Responsive Design</li>
                             </ul>
                         </div>
 
@@ -292,8 +421,12 @@
                                 <li>Express</li>
                                 <li>PostgreSQL</li>
                                 <li>MongoDB</li>
-                                <li>Vercel</li>
+                                <li>API Development</li>
                                 <li>Supabase</li>
+                                <li>Vercel</li>
+                                <li>Kubernetes</li>
+                                <li>Camunda</li>
+                                <li>CI/CD</li>
                             </ul>
                         </div>
 
@@ -302,13 +435,14 @@
                                 <div class="skill-icon">
                                     <i class="fa-solid fa-palette"></i>
                                 </div>
-                                <h3>Design</h3>
+                                <h3>Design & UX</h3>
                             </div>
                             <ul>
-                                <li>UI / UX</li>
+                                <li>UI/UX Design</li>
                                 <li>Figma</li>
-                                <li>Responsive Design</li>
                                 <li>Accessibility</li>
+                                <li>Design Systems</li>
+                                <li>User Research</li>
                             </ul>
                         </div>
 
@@ -317,14 +451,15 @@
                                 <div class="skill-icon">
                                     <i class="fa-solid fa-users"></i>
                                 </div>
-                                <h3>Soft Skills</h3>
+                                <h3>Leadership & Soft Skills</h3>
                             </div>
                             <ul>
-                                <li>Problem Solving</li>
-                                <li>Communication</li>
-                                <li>Collaboration</li>
-                                <li>Adaptation</li>
+                                <li>Technical Leadership</li>
                                 <li>Mentoring</li>
+                                <li>Architecture Decisions</li>
+                                <li>Cross-functional Collaboration</li>
+                                <li>AI/ML Integration</li>
+                                <li>Performance Optimization</li>
                             </ul>
                         </div>
                     </div>

@@ -54,7 +54,7 @@ p {
 }
 
 p + p {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 em {
@@ -351,7 +351,7 @@ section h2 {
 
 
 
-.project-tags {
+.tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -365,6 +365,12 @@ section h2 {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+  transition: background-color 0.2s ease;
+  cursor: default;
+}
+
+.tag:hover {
+  background-color: var(--color-orange);
 }
 
 #projects-navigation {
@@ -446,6 +452,12 @@ section h2 {
 .experience-item small {
   color: var(--color-gray);
   font-size: 0.9rem;
+}
+
+.date-ranges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .experience-item ul {
