@@ -235,7 +235,7 @@ button:disabled,
 
 /* Header */
 #header-container {
-  padding-bottom: 2rem;
+  padding-bottom: 5.5rem;
   padding-top: 1.5rem;
 }
 
@@ -286,7 +286,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  margin-top: 4rem;
+  margin-top: 0;
   padding-top: 4rem;
 }
 
@@ -774,13 +774,13 @@ footer {
   }
 
   #header-container {
-    padding-bottom: 1.5rem;
+    padding-bottom: 5.5rem;
     padding-top: 6.5rem;
   }
 
   main {
     gap: 7.5rem;
-    margin-top: 7rem;
+    margin-top: 0;
     padding-top: 6rem;
   }
 
@@ -892,6 +892,32 @@ footer {
   #contact-header p {
     font-size: 1rem;
   }
+}
+
+/* Scroll Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-item,
+.experience-item,
+.skill-card {
+  animation: fade-in-up linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+section h2 {
+  animation: fade-in-up linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
 }
 
 /* Utilities */
