@@ -1,0 +1,30 @@
+# Jekyll configuration for blog
+title: Derrick Wiest
+description: Web developer based in Pittsburgh
+url: https://dlwiest.github.io
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude files from processing
+exclude:
+  - .prettierrc
+  - README.md
+  - node_modules/
+  - vendor/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

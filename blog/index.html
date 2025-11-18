@@ -1,0 +1,48 @@
+---
+layout: default
+title: Blog
+---
+
+<main class="bg-off-white">
+    <div class="container blog-container">
+        <div class="content">
+            <header class="blog-header">
+                <h1>Blog</h1>
+                <p>Thoughts on web development, design, and technology</p>
+            </header>
+
+            <div class="blog-posts-list">
+                {% for post in site.posts %}
+                <a href="{{ post.url }}" class="blog-post-preview">
+                    <h2>{{ post.title }}</h2>
+                    <div class="blog-post-meta">
+                        <time datetime="{{ post.date | date_to_xmlschema }}">
+                            {{ post.date | date: "%B %d, %Y" }}
+                        </time>
+                        {% if post.categories %}
+                        <div class="tags">
+                            {% for category in post.categories %}
+                            <span class="tag">{{ category }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% if post.excerpt %}
+                    <div class="blog-post-excerpt">
+                        {{ post.excerpt | strip_html | truncatewords: 50 }}
+                    </div>
+                    {% endif %}
+                    <span class="blog-post-read-more">Read more &rarr;</span>
+                </a>
+                {% endfor %}
+
+                {% if site.posts.size == 0 %}
+                <div class="blog-post-preview">
+                    <h2>No posts yet</h2>
+                    <p class="blog-post-excerpt">Check back soon for new content!</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</main>
