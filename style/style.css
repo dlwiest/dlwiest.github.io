@@ -657,6 +657,19 @@ section h2 {
   flex: none;
 }
 
+.contact-aside {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+}
+
+.contact-aside a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Footer */
 #footer-container {
   display: flex;
@@ -679,6 +692,20 @@ footer {
 #copyright p {
   color: var(--color-light-gray);
   font-size: 0.8rem;
+}
+
+#copyright p + p {
+  margin-top: 0.25rem;
+}
+
+#copyright a {
+  color: var(--color-light-gray);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#copyright a:hover {
+  color: white;
 }
 
 #footer-right {
