@@ -316,7 +316,7 @@ section h2 {
   cursor: pointer;
 }
 
-.project-item:hover {
+a.project-item:hover {
   border-left-color: var(--color-orange);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   color: inherit;
@@ -660,14 +660,18 @@ section h2 {
 .contact-aside {
   margin-top: 1.25rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-gray);
   text-align: center;
 }
 
 .contact-aside a {
-  color: white;
+  color: var(--color-blue);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.contact-aside a:hover {
+  color: var(--color-dark-blue);
 }
 
 /* Footer */
