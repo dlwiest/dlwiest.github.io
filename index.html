@@ -5,7 +5,7 @@
     cathartic. If you've been stuck in framework land for a while, I'd strongly recommend giving vanilla
     a shot.
 
-    fyi this site should navigate smooothly in both desktop and mobile environments and should degrade
+    fyi this site should navigate smoothly in both desktop and mobile environments and should degrade
     gracefully if JavaScript is disabled in your browser. If you happen to spot any issues, please let me know!
 -->
 
@@ -15,7 +15,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Derrick Wiest — Web Developer</title>
+
+    <meta name="description" content="Derrick Wiest is a Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
+    <meta name="author" content="Derrick Wiest" />
+    <link rel="canonical" href="https://dlwiest.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Derrick Wiest" />
+    <meta property="og:title" content="Derrick Wiest — Web Developer" />
+    <meta property="og:description" content="Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
+    <meta property="og:url" content="https://dlwiest.com/" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Derrick Wiest — Web Developer" />
+    <meta name="twitter:description" content="Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,7 +71,7 @@
                     <div id="header-main-copy">
                         <span>Hi, my name is</span>
                         <h1 class="text-dark-blue">Derrick Wiest</h1>
-                        <p>I'm a seasoned <span class="text-blue">web developer</span> based in Pittsburgh</p>
+                        <p>Pittsburgh-based <span class="text-blue">web developer</span> building full-stack products — from pinball leaderboards to enterprise fulfillment platforms.</p>
                     </div>
 
                     <div id="header-main-photo">
@@ -92,9 +108,9 @@
                                         <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>JukeRabbit started as a solution to a problem I'd witnessed too many times: party music becoming a source of tension instead of fun. You know the scene: someone gets aux access and suddenly everyone's fighting over the queue. I built JukeRabbit as essentially TouchTunes for house parties, where the host starts a session, connects their speakers, and shares a six-digit code or QR with guests who can then request songs and watch the playlist evolve in real time.</p>
-                                    <p>What sets JukeRabbit apart is the smart queue management. Instead of just dumping new requests at the end of a potentially endless queue, it intelligently prioritizes songs based on how long it's been since each guest heard one of their picks, keeping everyone engaged.</p>
-                                    <p>I recently revived the project, ported it to Apple Music, and gave it a full UI overhaul. It's live now at jukerabbit.app — no install required, just open it up and start a session.</p>
+                                    <p>JukeRabbit came out of a scene I'd lived through too many times: the party where the music turns into a turf war. Someone grabs the aux, and suddenly everyone's jockeying over the queue. So I built the house-party answer to TouchTunes, the host starts a session, connects their speakers, and shares a six-digit code or QR; guests join from their phones to request songs and watch the playlist evolve in real time.</p>
+                                    <p>The part I'm proudest of is the queue itself. Instead of tacking each new request onto the end of an ever-growing list, JukeRabbit weighs songs by how long it's been since each guest last heard one of their picks, so nobody gets drowned out and everyone stays in the mix.</p>
+                                    <p>After a long hiatus, I recently revived the project: ported it to Apple Music and gave it a full UI overhaul. It's live now at jukerabbit.app, with nothing to install, just open it up and start a session.</p>
 
                                     <div class="tags">
                                         <span class="tag">Next.js</span>
@@ -113,9 +129,9 @@
                                         <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>In July 2024, I teamed up with Alex Phelps and Brendan Turner to create what started as PinHub but has since evolved into Flippd, a pinball-oriented social media platform. What began as a content aggregator has transformed into a thriving community where pinball enthusiasts share photos, scores, and reviews through a timeline-based social feed.</p>
-                                    <p>The platform centers around user-generated content with smart algorithms that surface significant achievements, personal bests, and community highlights. We still maintain our foundational features like local event calendars, interactive venue maps, and our comprehensive pinball machine encyclopedia, but they now seamlessly integrate with the social experience.</p>
-                                    <p>As of December 2024, we've officially acquired Pindigo, strengthening our position as the go-to platform for pinball score tracking and community engagement.</p>
+                                    <p>In July 2024, Alex Phelps brought me and Brendan Turner on to build what started as PinHub and has since become Flippd. Alex, the company's founder and CEO, had the vision for a real home base for competitive pinball; Brendan and I built the product that made it real. What began as a simple content aggregator has grown into a full platform for tracking scores, climbing leaderboards, and getting to know the machines you play.</p>
+                                    <p>At its heart, Flippd is about your pinball history. You can log scores, chase personal bests, and compare with friends across global and local leaderboards, or connect Stern Insider Connected to import your Stern scores automatically. Wrapped around that is a machine encyclopedia full of rules and strategy guides, interactive venue maps, and event and tournament listings that help players plug into their local scene, all tied together by a social feed that surfaces standout scores and community highlights.</p>
+                                    <p>In December 2024, Flippd acquired Pindigo, folding years of real score-tracking history and an established community into the platform and cementing it as a go-to home for competitive pinball.</p>
                                     
                                     <div class="tags">
                                         <span class="tag">React</span>
@@ -135,9 +151,9 @@
                                         <h3>Bahia Pez Vela <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>In 2024, I took on my first marketing site project for Bahia Pez Vela, a luxury resort community in Costa Rica. This was uncharted territory for me since I'd never built a hospitality marketing site before, but the challenge turned out to be exactly what I needed to push my skills in new directions.</p>
-                                    <p>The biggest technical hurdle was integrating with their existing booking platform, which offered essentially no API to work with. I ended up having to scrape their booking system's HTML responses to extract availability data, then cache and filter it to provide a seamless search experience without users having to leave the site.</p>
-                                    <p>Building for an international audience meant implementing proper localization from the ground up using Paraglide, supporting both English and Spanish with smart URL routing. I also got to work with Mapbox again, creating an interactive resort map where guests can explore different villa locations and immediately check availability.</p>
+                                    <p>In 2024, I built my first marketing site: Bahia Pez Vela, a luxury resort community in Costa Rica. Hospitality was new territory for me, and that was exactly the appeal, it pushed me well outside the product work I was used to.</p>
+                                    <p>The hardest part was availability. Their existing booking platform offered essentially no API, so I scraped its HTML responses to pull real-time availability, then cached and filtered the results to give guests a fast, seamless search without ever leaving the site.</p>
+                                    <p>Because the audience is international, I built localization in from the ground up with Paraglide, serving both English and Spanish behind clean, language-aware URLs. I also got another chance to work with Mapbox, building an interactive resort map where guests can explore individual villas and check their availability on the spot.</p>
                                     
                                     <div class="tags">
                                         <span class="tag">Next.js</span>
@@ -192,9 +208,9 @@
                                         </div>
         
                                         <ul>
-                                            <li>Enhanced the reporting UI for vendor fulfillment, fixing longstanding bugs and improving user experience, enabling seamless oversight and modification of in-progress orders with access to actionable reporting data.</li>
-                                            <li>Led initiatives to support platform rebuild, including load testing and exploring AI-driven features like predictive order routing, strengthening system reliability and performance.</li>
-                                            <li>Contributed to migrating the existing hosting architecture to Kubernetes, improving scalability and deployment efficiency for the vendor fulfillment platform.</li>
+                                            <li>Rebuilt the vendor fulfillment reporting UI, clearing longstanding bugs and giving teams a clear view into in-progress orders along with the ability to modify them on the fly.</li>
+                                            <li>Drove reliability work for the platform rebuild, running load tests and prototyping AI-driven features like predictive order routing.</li>
+                                            <li>Helped migrate the hosting architecture to Kubernetes, improving scalability and deployment speed for the fulfillment platform.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -224,10 +240,10 @@
                                         </div>
         
                                         <ul>
-                                            <li>Led front-end modernization by migrating the core product from AngularJS to React, overseeing architectural decisions and establishing development and testing standards.</li>
-                                            <li>Mentored team members on React best practices, resulting in enhanced code quality and faster development cycles.</li>
-                                            <li>Delivered key features including Reporting and Candidate Texting, while supporting legacy systems, contributing to increased user engagement and system stability.</li>
-                                            <li>Pioneered JazzHR's first AI feature, developing and deploying a prototype that analyzes resumes against job descriptions, enhancing product value and improving hiring decisions.</li>
+                                            <li>Led the front-end migration of the core product from AngularJS to React, owning the architecture and setting the team's development and testing standards.</li>
+                                            <li>Mentored engineers on React patterns, lifting code quality and shortening development cycles.</li>
+                                            <li>Shipped major features including Reporting and Candidate Texting while keeping legacy systems running.</li>
+                                            <li>Built and shipped JazzHR's first AI feature, a prototype applying NLP to match resumes against job descriptions.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -258,9 +274,9 @@
                                         </div>
         
                                         <ul>
-                                            <li>Developed a custom content management system (CMS) used by over 400 private car dealerships, enabling customers to manage website content and keep vehicle inventory current.</li>
-                                            <li>Built Friday Systems' first mobile app for inventory management, allowing customers to manage listings, update inventory, and upload photos from mobile devices. Available on the App Store and Google Play.</li>
-                                            <li>Maintained vehicle search engines (Motoverse, Auto-Locate, PA AutoFind) and expanded the database with 800,000+ listings.</li>
+                                            <li>Built a custom CMS used by 400+ independent car dealerships to manage their website content and keep vehicle inventory current.</li>
+                                            <li>Shipped Friday Systems' first mobile app for inventory management, letting dealers update listings and upload photos from their phones, released on the App Store and Google Play.</li>
+                                            <li>Maintained the company's vehicle search engines (Motoverse, Auto-Locate, PA AutoFind) and grew the database past 800,000 listings.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -289,9 +305,9 @@
                                         </div>
         
                                         <ul>
-                                            <li>Developed over 60 animated and dynamic templates for digital signage and interactive kiosks, all optimized for performance on microcomputers.</li>
-                                            <li>Created user-friendly dashboards for template customization across various devices, improving flexibility and accessibility of Industry Weapon's core product.</li>
-                                            <li>Optimized performance, improving template loading times and responsiveness across various display technologies.</li>
+                                            <li>Built 60+ animated, dynamic templates for digital signage and interactive kiosks, tuned to run smoothly on low-powered microcomputers.</li>
+                                            <li>Created dashboards that let customers customize templates across a range of devices, making the core product more flexible and accessible.</li>
+                                            <li>Optimized rendering to cut template load times and improve responsiveness across different display hardware.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -321,9 +337,9 @@
                                         </div>
         
                                         <ul>
-                                            <li>Collaborated with cross-functional teams to enhance internal software solutions, improving service for 100,000+ members.</li>
-                                            <li>Spearheaded front-end improvements for the Member Portal mobile application and internal tools, focusing on user experience, performance optimization, and engaging animations to facilitate more intuitive and efficient user interactions.</li>
-                                            <li>Contributed to the maintenance and evolution of a robust application catalog, implementing UX enhancements, architectural refinements, and performance optimizations to support scalable and responsive healthcare solutions.</li>
+                                            <li>Worked across teams to improve internal software serving 100,000+ health plan members.</li>
+                                            <li>Led front-end work on the Member Portal mobile app and internal tools, focusing on usability, performance, and animation to make everyday tasks faster and clearer.</li>
+                                            <li>Maintained and evolved a large application catalog, layering in UX, architectural, and performance improvements to keep healthcare tools responsive at scale.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -353,10 +369,10 @@
                                         </div>
         
                                         <ul>
-                                            <li>Partnered with faculty, administrators, and staff to build and maintain applications supporting college administrative, outreach, and e-learning initiatives.</li>
-                                            <li>Focused on accessibility to ensure compliance with public funding requirements, enhancing usability for a wide range of users.</li>
-                                            <li>Led the creation of the college's first real-time application for event presentations, utilizing WebSockets to facilitate live Q&A interactions, enhancing audience engagement and moderator efficiency during events.</li>
-                                            <li>Designed and implemented an interactive web application to assist students in developing, modifying, and collaborating on business plan proposals.</li>
+                                            <li>Partnered with faculty, administrators, and staff to build and maintain applications for college administration, outreach, and e-learning.</li>
+                                            <li>Built accessibility in from the start to meet public-funding compliance requirements and widen usability across a diverse user base.</li>
+                                            <li>Created the college's first real-time app for event presentations, using WebSockets to power live Q&A and give moderators tighter control during events.</li>
+                                            <li>Designed and built an interactive web app for students to draft, revise, and collaborate on business-plan proposals.</li>
                                         </ul>
                                         
                                         <div class="tags">
@@ -413,7 +429,7 @@
                                 <div class="skill-icon">
                                     <i class="fa-solid fa-server"></i>
                                 </div>
-                                <h3>Back End</h3>
+                                <h3>Back End &amp; Infrastructure</h3>
                             </div>
                             <ul>
                                 <li>Node.js</li>
@@ -450,7 +466,7 @@
                                 <div class="skill-icon">
                                     <i class="fa-solid fa-users"></i>
                                 </div>
-                                <h3>Leadership & Soft Skills</h3>
+                                <h3>Leadership &amp; Practices</h3>
                             </div>
                             <ul>
                                 <li>Technical Leadership</li>
@@ -527,6 +543,7 @@
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
+                </div>
             </footer>
         </div>
     </div>

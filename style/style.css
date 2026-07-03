@@ -674,6 +674,12 @@ a.project-item:hover {
   color: var(--color-dark-blue);
 }
 
+.contact-error {
+  color: #c0392b;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
 /* Footer */
 #footer-container {
   display: flex;

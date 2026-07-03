@@ -158,6 +158,25 @@ const toggleHamburgerMenu = () => {
   const form = document.querySelector('#contact form')
   let isSubmitting = false
 
+  const ERROR_MESSAGE =
+    'Something went wrong sending your message. Please try again, or reach out on LinkedIn.'
+
+  const clearError = () => {
+    const existing = form.querySelector('.contact-error')
+    if (existing) {
+      existing.remove()
+    }
+  }
+
+  const showError = () => {
+    clearError()
+    const error = document.createElement('p')
+    error.className = 'contact-error'
+    error.setAttribute('role', 'alert')
+    error.textContent = ERROR_MESSAGE
+    form.querySelector('.button').parentNode.after(error)
+  }
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -169,6 +188,7 @@ const toggleHamburgerMenu = () => {
     isSubmitting = true
     const button = e.target.querySelector('.button')
     button.disabled = true
+    clearError()
 
     // Preserve the container height to prevent jarring collapse
     const contactContainer = document.querySelector('#contact')
@@ -219,9 +239,11 @@ const toggleHamburgerMenu = () => {
         form.parentNode.replaceChild(sent, form)
       } else {
         console.error('Error sending email', data.message)
+        showError()
       }
     } catch (error) {
       console.error('Error sending email', error)
+      showError()
     } finally {
       isSubmitting = false
       button.disabled = false
