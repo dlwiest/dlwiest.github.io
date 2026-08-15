@@ -15,23 +15,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derrick Wiest — Web Developer</title>
+    <title>Derrick Wiest | Web Developer</title>
 
-    <meta name="description" content="Derrick Wiest is a Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
+    <meta name="description" content="Derrick Wiest is a Pittsburgh-based web developer building full-stack products, from pinball leaderboards to enterprise fulfillment platforms." />
     <meta name="author" content="Derrick Wiest" />
     <link rel="canonical" href="https://dlwiest.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Derrick Wiest" />
-    <meta property="og:title" content="Derrick Wiest — Web Developer" />
-    <meta property="og:description" content="Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
+    <meta property="og:title" content="Derrick Wiest | Web Developer" />
+    <meta property="og:description" content="Pittsburgh-based web developer building full-stack products, from pinball leaderboards to enterprise fulfillment platforms." />
     <meta property="og:url" content="https://dlwiest.com/" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Derrick Wiest — Web Developer" />
-    <meta name="twitter:description" content="Pittsburgh-based web developer building full-stack web products, from social platforms to enterprise fulfillment systems." />
+    <meta name="twitter:title" content="Derrick Wiest | Web Developer" />
+    <meta name="twitter:description" content="Pittsburgh-based web developer building full-stack products, from pinball leaderboards to enterprise fulfillment platforms." />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,9 +109,10 @@
                                         <h3>LD24xx Radar Tuner <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>I picked up a few cheap mmWave radar sensors to get better occupancy detection around the house, and found that the only way to configure them was a barely translated app that hands you raw threshold numbers with no way to see what they actually do. So I built the tool I wanted instead: connect over Bluetooth, watch a live radar plot of what the sensor sees, and tune it while you walk around the room.</p>
-                                    <p>Most of the work was in the protocol. These sensors speak a binary command format over Bluetooth LE with no official mobile SDK, so I verified every frame against a known-good open source implementation before writing any of it, then built the reassembler that turns the notification stream back into config acknowledgements and per-gate energy readings.</p>
-                                    <p>My favorite part is the calibration. Every room reflects radar differently, which is why factory defaults so often miss. The app measures the room's own background noise at each distance band, then places detection thresholds relative to what it measured rather than to a number someone guessed at a factory. I confirmed those writes really land by reading them back with the manufacturer's tool after power cycling the sensor. It's on the App Store and Google Play now, and it runs entirely on device: no backend, no accounts, no analytics, just Bluetooth to the sensor.</p>
+                                    <p>I picked up a few cheap mmWave radar sensors for better occupancy detection around the house. The only way to configure them turned out to be a barely translated app that hands you raw threshold numbers and no way to see what they do. So I built the one I wanted: connect over Bluetooth, watch a live radar plot of what the sensor sees, and tune it while you walk the room.</p>
+                                    <p>Most of the work was in the protocol. These sensors speak a binary command format over Bluetooth LE and ship no mobile SDK, so I checked every frame against a known-good open source implementation before writing any of it, then built the reassembler that turns the notification stream back into config acknowledgements and per-gate energy readings.</p>
+                                    <p>My favorite part is the calibration. Every room reflects radar differently, so factory defaults are a guess. The app measures the room's own background noise at each distance band and places detection thresholds relative to that. I confirmed the writes really reach the chip by reading them back with the manufacturer's tool after power cycling the sensor.</p>
+                                    <p>It's on the App Store and Google Play now. Everything runs on device: no backend, no accounts, no analytics, just Bluetooth to the sensor.</p>
 
                                     <div class="tags">
                                         <span class="tag">React Native</span>
@@ -133,7 +134,7 @@
 
                                     <p>JukeRabbit came out of a scene I'd lived through too many times: the party where the music turns into a turf war. Someone grabs the aux, and suddenly everyone's jockeying over the queue. So I built the house-party answer to TouchTunes: the host starts a session, connects their speakers, and shares a six-digit code or QR; guests join from their phones to request songs and watch the playlist evolve in real time.</p>
                                     <p>The part I'm proudest of is the queue itself. Instead of tacking each new request onto the end of an ever-growing list, JukeRabbit weighs songs by how long it's been since each guest last heard one of their picks, so nobody gets drowned out and everyone stays in the mix.</p>
-                                    <p>After a long hiatus, I recently revived the project: ported it to Apple Music and gave it a full UI overhaul. It's live now at jukerabbit.app. Nothing to install: open it up and start a session.</p>
+                                    <p>I revived it after a long hiatus: ported it to Apple Music and gave it a full UI overhaul. It's live at jukerabbit.app, nothing to install. Open it up and start a session.</p>
 
                                     <div class="tags">
                                         <span class="tag">Next.js</span>
@@ -152,8 +153,8 @@
                                         <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>In July 2024, Alex Phelps brought me and Brendan Turner on to build what started as PinHub and has since become Flippd. Alex, the company's founder and CEO, had the vision for a real home base for competitive pinball; Brendan and I built the product that made it real. What began as a simple content aggregator has grown into a full platform for tracking scores, climbing leaderboards, and getting to know the machines you play.</p>
-                                    <p>At its heart, Flippd is about your pinball history. You can log scores, chase personal bests, and compare with friends across global and local leaderboards, or connect Stern Insider Connected to import your Stern scores automatically. Around that sits a machine encyclopedia of rules and strategy guides, interactive venue maps, and event listings that plug players into their local scene. A social feed ties it together, surfacing standout scores and community highlights.</p>
+                                    <p>In July 2024, Alex Phelps brought me and Brendan Turner on to build what started as PinHub and has since become Flippd. Alex, the founder and CEO, wanted a real home base for competitive pinball. Brendan and I built it. What began as a content aggregator is now a full platform for tracking scores, climbing leaderboards, and getting to know the machines you play.</p>
+                                    <p>Flippd is really about your pinball history. You can log scores, chase personal bests, and compare with friends across global and local leaderboards, or connect Stern Insider Connected to import your Stern scores automatically. Around that sits a machine encyclopedia of rules and strategy guides, interactive venue maps, and event listings that plug players into their local scene. A social feed ties it together, surfacing standout scores and community highlights.</p>
                                     <p>In December 2024, Flippd acquired Pindigo, folding years of score-tracking history and an established community into the platform.</p>
                                     
                                     <div class="tags">
@@ -394,7 +395,7 @@
                                         <ul>
                                             <li>Partnered with faculty, administrators, and staff to build and maintain applications for college administration, outreach, and e-learning.</li>
                                             <li>Built accessibility in from the start to meet public-funding compliance requirements and widen usability across a diverse user base.</li>
-                                            <li>Created the college's first real-time app for event presentations, using WebSockets to power live Q&A and give moderators tighter control during events.</li>
+                                            <li>Created the college's first real-time app for event presentations, using WebSockets to power live Q&amp;A and give moderators tighter control during events.</li>
                                             <li>Designed and built an interactive web app for students to draft, revise, and collaborate on business-plan proposals.</li>
                                         </ul>
                                         
@@ -473,7 +474,7 @@
                                 <div class="skill-icon">
                                     <i class="fa-solid fa-palette"></i>
                                 </div>
-                                <h3>Design & UX</h3>
+                                <h3>Design &amp; UX</h3>
                             </div>
                             <ul>
                                 <li>UI/UX Design</li>
