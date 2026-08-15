@@ -19,6 +19,9 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* The navbar is position: fixed, so scrollIntoView and #anchor jumps would
+     otherwise land underneath it. Keep this in step with the navbar height. */
+  scroll-padding-top: 3rem;
 }
 
 body {
@@ -749,6 +752,10 @@ footer {
 
 /* Tablets + Desktop */
 @media (min-width: 800px) {
+  html {
+    scroll-padding-top: 3.5rem;
+  }
+
   body {
     padding-top: 3.5rem;
   }
