@@ -96,13 +96,36 @@
                     
                     <div data-component="tab-panel">
                         <div data-tabs>
-                            <button data-tab="1" role="tab" aria-selected="true">JukeRabbit</button>
-                            <button data-tab="2" role="tab" aria-selected="false">Flippd</button>
-                            <button data-tab="3" role="tab" aria-selected="false">Bahía Pez Vela</button>
+                            <button data-tab="1" role="tab" aria-selected="true">LD24xx Radar Tuner</button>
+                            <button data-tab="2" role="tab" aria-selected="false">JukeRabbit</button>
+                            <button data-tab="3" role="tab" aria-selected="false">Flippd</button>
+                            <button data-tab="4" role="tab" aria-selected="false">Bahía Pez Vela</button>
                         </div>
 
                         <div data-tab-contents>
                             <div data-tab-content="1" role="tabpanel" aria-hidden="false">
+                                <a href="https://apps.apple.com/us/app/ld24xx-radar-tuner/id6792838778" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>LD24xx Radar Tuner <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
+
+                                    <p>I picked up a few cheap mmWave radar sensors to get better occupancy detection around the house, and found that the only way to configure them was a barely translated app that hands you raw threshold numbers with no way to see what they actually do. So I built the tool I wanted instead: connect over Bluetooth, watch a live radar plot of what the sensor sees, and tune it while you walk around the room.</p>
+                                    <p>Most of the work was in the protocol. These sensors speak a binary command format over Bluetooth LE with no official mobile SDK, so I verified every frame against a known-good open source implementation before writing any of it, then built the reassembler that turns the notification stream back into config acknowledgements and per-gate energy readings.</p>
+                                    <p>My favorite part is the calibration. Every room reflects radar differently, which is why factory defaults so often miss. The app measures the room's own background noise at each distance band, then places detection thresholds relative to what it measured rather than to a number someone guessed at a factory. I confirmed those writes really land by reading them back with the manufacturer's tool after power cycling the sensor. It's on the App Store and Google Play now, and it runs entirely on device: no backend, no accounts, no analytics, just Bluetooth to the sensor.</p>
+
+                                    <div class="tags">
+                                        <span class="tag">React Native</span>
+                                        <span class="tag">Expo</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Bluetooth LE</span>
+                                        <span class="tag">Binary Protocols</span>
+                                        <span class="tag">iOS</span>
+                                        <span class="tag">Android</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div data-tab-content="2" role="tabpanel" aria-hidden="false">
                                 <a href="https://jukerabbit.app" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
@@ -123,7 +146,7 @@
                                 </a>
                             </div>
 
-                            <div data-tab-content="2" role="tabpanel" aria-hidden="false">
+                            <div data-tab-content="3" role="tabpanel" aria-hidden="false">
                                 <a href="https://flippd.it" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
@@ -145,7 +168,7 @@
                                 </a>
                             </div>
 
-                            <div data-tab-content="3" role="tabpanel" aria-hidden="false">
+                            <div data-tab-content="4" role="tabpanel" aria-hidden="false">
                                 <a href="https://bahiapezvela.com" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>Bahía Pez Vela <i class="fa-solid fa-external-link"></i></h3>
