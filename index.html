@@ -97,9 +97,10 @@
                     <div data-component="tab-panel">
                         <div data-tabs>
                             <button data-tab="1" role="tab" aria-selected="true">LD24xx Radar Tuner</button>
-                            <button data-tab="2" role="tab" aria-selected="false">JukeRabbit</button>
-                            <button data-tab="3" role="tab" aria-selected="false">Flippd</button>
-                            <button data-tab="4" role="tab" aria-selected="false">Bahía Pez Vela</button>
+                            <button data-tab="2" role="tab" aria-selected="false">hass-react</button>
+                            <button data-tab="3" role="tab" aria-selected="false">JukeRabbit</button>
+                            <button data-tab="4" role="tab" aria-selected="false">Flippd</button>
+                            <button data-tab="5" role="tab" aria-selected="false">Bahía Pez Vela</button>
                         </div>
 
                         <div data-tab-contents>
@@ -127,6 +128,27 @@
                             </div>
 
                             <div data-tab-content="2" role="tabpanel" aria-hidden="false">
+                                <a href="https://hass-react.com" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>hass-react <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
+
+                                    <p>I run Home Assistant at home and wanted a dashboard that looked like something I'd designed rather than something I'd configured. Every option I found hands you its own UI and lets you theme around the edges. hass-react goes the other way: it gives you live entity state and typed controls, and you write every pixel yourself.</p>
+                                    <p>The interesting problem was state. A house has hundreds of entities, and the naive approach re-renders the whole tree whenever any one of them changes. So a single shared WebSocket keeps everything in sync while each component only re-renders when its own entity moves. All 17 entity types work either as a render-prop component or a hook, so you choose per component instead of committing to one style up front.</p>
+                                    <p>The piece I didn't expect to enjoy building is the mock mode: a simulated Home Assistant that answers service calls and state changes like the real one, so you can work on a dashboard without a house nearby. Auth covers OAuth with token refresh, long-lived tokens, and a server-side transport that keeps credentials out of the browser. It's MIT, on npm, and documented at hass-react.com.</p>
+
+                                    <div class="tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Library Design</span>
+                                        <span class="tag">WebSockets</span>
+                                        <span class="tag">OAuth</span>
+                                        <span class="tag">Open Source</span>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div data-tab-content="3" role="tabpanel" aria-hidden="false">
                                 <a href="https://jukerabbit.app" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
@@ -147,7 +169,7 @@
                                 </a>
                             </div>
 
-                            <div data-tab-content="3" role="tabpanel" aria-hidden="false">
+                            <div data-tab-content="4" role="tabpanel" aria-hidden="false">
                                 <a href="https://flippd.it" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
@@ -169,7 +191,7 @@
                                 </a>
                             </div>
 
-                            <div data-tab-content="4" role="tabpanel" aria-hidden="false">
+                            <div data-tab-content="5" role="tabpanel" aria-hidden="false">
                                 <a href="https://bahiapezvela.com" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>Bahía Pez Vela <i class="fa-solid fa-external-link"></i></h3>
