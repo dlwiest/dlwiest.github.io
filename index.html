@@ -96,36 +96,37 @@
                     
                     <div data-component="tab-panel">
                         <div data-tabs>
-                            <button data-tab="1" role="tab" aria-selected="true">LD24xx Radar Tuner</button>
+                            <button data-tab="1" role="tab" aria-selected="true">Flippd</button>
                             <button data-tab="2" role="tab" aria-selected="false">hass-react</button>
-                            <button data-tab="3" role="tab" aria-selected="false">JukeRabbit</button>
-                            <button data-tab="4" role="tab" aria-selected="false">Flippd</button>
+                            <button data-tab="3" role="tab" aria-selected="false">LD24xx Radar Tuner</button>
+                            <button data-tab="4" role="tab" aria-selected="false">JukeRabbit</button>
                             <button data-tab="5" role="tab" aria-selected="false">Bahía Pez Vela</button>
                         </div>
 
                         <div data-tab-contents>
+
                             <div data-tab-content="1" role="tabpanel" aria-hidden="false">
-                                <a href="https://apps.apple.com/us/app/ld24xx-radar-tuner/id6792838778" target="_blank" class="project-item bg-white">
+                                <a href="https://flippd.it" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
-                                        <h3>LD24xx Radar Tuner <i class="fa-solid fa-external-link"></i></h3>
+                                        <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
                                     </div>
 
-                                    <p>I picked up a few cheap mmWave radar sensors for better occupancy detection around the house. The only way to configure them turned out to be a barely translated app that hands you raw threshold numbers and no way to see what they do. So I built the one I wanted: connect over Bluetooth, watch a live radar plot of what the sensor sees, and tune it while you walk the room.</p>
-                                    <p>Most of the work was in the protocol. These sensors speak a binary command format over Bluetooth LE and ship no mobile SDK, so I checked every frame against a known-good open source implementation before writing any of it, then built the reassembler that turns the notification stream back into config acknowledgements and per-gate energy readings.</p>
-                                    <p>My favorite part is the calibration. Every room reflects radar differently, so factory defaults are a guess. The app measures the room's own background noise at each distance band and places detection thresholds relative to that. I confirmed the writes really reach the chip by reading them back with the manufacturer's tool after power cycling the sensor.</p>
-                                    <p>It's on the App Store and Google Play now. Everything runs on device: no backend, no accounts, no analytics, just Bluetooth to the sensor.</p>
-
+                                    <p>In July 2024, Alex Phelps brought me and Brendan Turner on to build what started as PinHub and has since become Flippd. Alex, the founder and CEO, wanted a real home base for competitive pinball. Brendan and I built it. What began as a content aggregator is now a full platform for tracking scores, climbing leaderboards, and getting to know the machines you play.</p>
+                                    <p>Flippd is really about your pinball history. You can log scores, chase personal bests, and compare with friends across global and local leaderboards, or connect Stern Insider Connected to import your Stern scores automatically. Around that sits a machine encyclopedia of rules and strategy guides, interactive venue maps, and event listings that plug players into their local scene. A social feed ties it together, surfacing standout scores and community highlights.</p>
+                                    <p>In December 2024, Flippd acquired Pindigo, folding years of score-tracking history and an established community into the platform.</p>
+                                    
                                     <div class="tags">
-                                        <span class="tag">React Native</span>
-                                        <span class="tag">Expo</span>
+                                        <span class="tag">React</span>
+                                        <span class="tag">Next.js</span>
                                         <span class="tag">TypeScript</span>
-                                        <span class="tag">Bluetooth LE</span>
-                                        <span class="tag">Binary Protocols</span>
-                                        <span class="tag">iOS</span>
-                                        <span class="tag">Android</span>
+                                        <span class="tag">PostgreSQL</span>
+                                        <span class="tag">Mapbox</span>
+                                        <span class="tag">Social Media</span>
+                                        <span class="tag">Real-time</span>
                                     </div>
                                 </a>
                             </div>
+
 
                             <div data-tab-content="2" role="tabpanel" aria-hidden="false">
                                 <a href="https://hass-react.com" target="_blank" class="project-item bg-white">
@@ -149,6 +150,30 @@
                             </div>
 
                             <div data-tab-content="3" role="tabpanel" aria-hidden="false">
+                                <a href="https://apps.apple.com/us/app/ld24xx-radar-tuner/id6792838778" target="_blank" class="project-item bg-white">
+                                    <div class="project-header">
+                                        <h3>LD24xx Radar Tuner <i class="fa-solid fa-external-link"></i></h3>
+                                    </div>
+
+                                    <p>I picked up a few cheap mmWave radar sensors for better occupancy detection around the house. The only way to configure them turned out to be a barely translated app that hands you raw threshold numbers and no way to see what they do. So I built the one I wanted: connect over Bluetooth, watch a live radar plot of what the sensor sees, and tune it while you walk the room.</p>
+                                    <p>Most of the work was in the protocol. These sensors speak a binary command format over Bluetooth LE and ship no mobile SDK, so I checked every frame against a known-good open source implementation before writing any of it, then built the reassembler that turns the notification stream back into config acknowledgements and per-gate energy readings.</p>
+                                    <p>My favorite part is the calibration. Every room reflects radar differently, so factory defaults are a guess. The app measures the room's own background noise at each distance band and places detection thresholds relative to that. I confirmed the writes really reach the chip by reading them back with the manufacturer's tool after power cycling the sensor.</p>
+                                    <p>It's on the App Store and Google Play now. Everything runs on device: no backend, no accounts, no analytics, just Bluetooth to the sensor.</p>
+
+                                    <div class="tags">
+                                        <span class="tag">React Native</span>
+                                        <span class="tag">Expo</span>
+                                        <span class="tag">TypeScript</span>
+                                        <span class="tag">Bluetooth LE</span>
+                                        <span class="tag">Binary Protocols</span>
+                                        <span class="tag">iOS</span>
+                                        <span class="tag">Android</span>
+                                    </div>
+                                </a>
+                            </div>
+
+
+                            <div data-tab-content="4" role="tabpanel" aria-hidden="false">
                                 <a href="https://jukerabbit.app" target="_blank" class="project-item bg-white">
                                     <div class="project-header">
                                         <h3>JukeRabbit <i class="fa-solid fa-external-link"></i></h3>
@@ -169,27 +194,6 @@
                                 </a>
                             </div>
 
-                            <div data-tab-content="4" role="tabpanel" aria-hidden="false">
-                                <a href="https://flippd.it" target="_blank" class="project-item bg-white">
-                                    <div class="project-header">
-                                        <h3>Flippd <i class="fa-solid fa-external-link"></i></h3>
-                                    </div>
-
-                                    <p>In July 2024, Alex Phelps brought me and Brendan Turner on to build what started as PinHub and has since become Flippd. Alex, the founder and CEO, wanted a real home base for competitive pinball. Brendan and I built it. What began as a content aggregator is now a full platform for tracking scores, climbing leaderboards, and getting to know the machines you play.</p>
-                                    <p>Flippd is really about your pinball history. You can log scores, chase personal bests, and compare with friends across global and local leaderboards, or connect Stern Insider Connected to import your Stern scores automatically. Around that sits a machine encyclopedia of rules and strategy guides, interactive venue maps, and event listings that plug players into their local scene. A social feed ties it together, surfacing standout scores and community highlights.</p>
-                                    <p>In December 2024, Flippd acquired Pindigo, folding years of score-tracking history and an established community into the platform.</p>
-                                    
-                                    <div class="tags">
-                                        <span class="tag">React</span>
-                                        <span class="tag">Next.js</span>
-                                        <span class="tag">TypeScript</span>
-                                        <span class="tag">PostgreSQL</span>
-                                        <span class="tag">Mapbox</span>
-                                        <span class="tag">Social Media</span>
-                                        <span class="tag">Real-time</span>
-                                    </div>
-                                </a>
-                            </div>
 
                             <div data-tab-content="5" role="tabpanel" aria-hidden="false">
                                 <a href="https://bahiapezvela.com" target="_blank" class="project-item bg-white">
@@ -212,6 +216,8 @@
                                     </div>
                                 </a>
                             </div>
+
+                        
 
                         </div>
 
