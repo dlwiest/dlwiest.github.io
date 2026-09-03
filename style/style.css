@@ -490,7 +490,8 @@ a.project-item:hover {
 /* Skills */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr;
+  align-items: start;
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -597,6 +598,7 @@ a.project-item:hover {
 }
 
 #contact form {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -658,23 +660,6 @@ a.project-item:hover {
 
 #contact form .button-secondary {
   flex: none;
-}
-
-.contact-aside {
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
-  color: var(--color-gray);
-  text-align: center;
-}
-
-.contact-aside a {
-  color: var(--color-blue);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.contact-aside a:hover {
-  color: var(--color-dark-blue);
 }
 
 .contact-error {
@@ -828,10 +813,6 @@ footer {
     padding-top: 6rem;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   #contact {
     flex-direction: column;
     gap: 3rem;
@@ -878,24 +859,36 @@ footer {
 
 }
 
+/* Skills grid: 1 column on phones, 2 (last card full-width) from 640px,
+   3 equal tracks from 940px, the first width where "infrastructure" clears
+   the card padding with equal columns. */
+@media (min-width: 640px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-grid .skill-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 940px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .skills-grid .skill-card:last-child {
+    grid-column: auto;
+  }
+}
+
 /* Large Desktop */
 @media (min-width: 1220px) {
   .container {
     margin: 0;
   }
-  
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 /* Mobile Optimizations */
 @media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
   .skill-card {
     padding: 1.5rem;
   }
@@ -921,7 +914,6 @@ footer {
   
   #contact form {
     padding: 1.5rem;
-    margin: 0 1rem;
   }
   
   #contact form div {

@@ -36,7 +36,7 @@ class TabPanel {
       this.contents[i].setAttribute('aria-hidden', active === 'true' ? 'false' : 'true')
     }
 
-    if (window.innerWidth <= 480) {
+    if (window.innerWidth <= 799) {
       this.element.scrollIntoView({ behavior: 'smooth' })
     }
   }

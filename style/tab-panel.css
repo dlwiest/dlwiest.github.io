@@ -4,7 +4,7 @@
   margin-top: 1rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 799px) {
   [data-component="tab-panel"] {
     flex-direction: column;
   }
@@ -16,7 +16,7 @@
   min-width: 18rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 799px) {
   [data-component="tab-panel"] [data-tabs] {
     display: none;
     background-color: #0f0;
@@ -65,7 +65,7 @@
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 799px) {
   [data-component="tab-panel"] [data-nav-arrows] {
     display: flex;
     justify-content: flex-end;
